@@ -27,7 +27,7 @@ body {
     padding: 0 20px;
 }
 
-/* --- Navbar --- */
+/* --- Navbar (IL MENU BELLO È QUI) --- */
 .navbar {
     background-color: var(--colore-card); /* Sfondo scuro per card */
     border-bottom: 1px solid var(--colore-bordo); /* Bordo scuro */
@@ -39,26 +39,27 @@ body {
 }
 
 .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* METTE LOGO E MENU SULLA STESSA RIGA */
+    justify-content: space-between; /* SPINGE IL LOGO A SINISTRA E IL MENU A DESTRA */
+    align-items: center; /* LI ALLINEA AL CENTRO VERTICALMENTE */
 }
 
-.logo, .logo:visited { /* AGGIUNTA REGOLA :visited */
+.logo, .logo:visited {
     font-size: 1.8rem;
     font-weight: bold;
     color: var(--colore-oro); /* Logo ORO */
     text-decoration: none;
 }
 
-.nav-menu a, .nav-menu a:visited { /* AGGIUNTA REGOLA :visited */
-    text-decoration: none;
+/* QUESTO È LO STILE PER "Home Progetti Contatti" */
+.nav-menu a, .nav-menu a:visited {
+    text-decoration: none; /* TOGLIE SOTTOLINEATURA */
     color: var(--colore-testo-sec); /* Link menu grigio chiaro */
     font-weight: 500;
-    margin-left: 20px;
+    margin-left: 20px; /* AGGIUNGE SPAZIO TRA I LINK */
 }
 
-.nav-menu a.active, .nav-menu a.active:visited { /* AGGIUNTA REGOLA :visited */
+.nav-menu a.active, .nav-menu a.active:visited {
     color: var(--colore-oro); /* Link attivo ORO */
     font-weight: bold;
 }
@@ -70,12 +71,13 @@ body {
 }
 
 .hero-img {
+    /* Questo stile c'è anche se non lo usi in index.html, non fa danni */
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1.5rem;
-    border: 5px solid var(--colore-card); /* Bordo in tinta */
+    border: 5px solid var(--colore-card); 
     box-shadow: var(--ombra-card);
 }
 
@@ -91,9 +93,10 @@ body {
     margin-bottom: 2rem;
 }
 
-/* --- Contenuto Pagina (per Chi Siamo, Progetti, Contatti) --- */
+/* --- Contenuto Pagina (per Progetti, Contatti) --- */
 .page-content {
     padding: 2rem 0;
+    min-height: 60vh; 
 }
 
 .page-content h1 {
@@ -118,7 +121,7 @@ body {
 
 /* --- Bottoni (Call to Action) --- */
 .cta-button, .cta-button-small,
-.cta-button:visited, .cta-button-small:visited { /* AGGIUNTA REGOLA :visited */
+.cta-button:visited, .cta-button-small:visited {
     display: inline-block;
     background-color: var(--colore-link); /* Bottone ROSSO VINO */
     color: var(--colore-testo);           /* Testo bottone BIANCO */
@@ -133,7 +136,7 @@ body {
     background-color: var(--colore-link-hover); /* Rosso più scuro */
 }
 
-.cta-button-small, .cta-button-small:visited { /* AGGIUNTA REGOLA :visited */
+.cta-button-small, .cta-button-small:visited {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
 }
@@ -151,33 +154,6 @@ body {
     margin-bottom: 1rem;
 }
 
-/* --- Pagina Chi Siamo --- */
-.img-profilo-small {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    float: left;
-    margin-right: 1.5rem;
-    margin-bottom: 0.5rem;
-    border: 3px solid var(--colore-bordo); /* Bordo scuro */
-}
-
-.skills-list {
-    list-style-type: "✓";
-    padding-left: 20px;
-}
-
-.skills-list li {
-    padding-left: 10px;
-    margin-bottom: 0.5rem;
-}
-
-/* --- Pagina Contatti --- */
-.social-contatti a, .social-contatti a:visited { /* AGGIUNTA REGOLA :visited */
-    font-size: 1.1rem;
-}
-
 /* --- Footer --- */
 .footer {
     text-align: center;
@@ -189,22 +165,7 @@ body {
     font-size: 0.9rem;
 }
 
-.footer-social {
-    margin-bottom: 1rem;
-}
-
-.footer-social a, .footer-social a:visited { /* AGGIUNTA REGOLA :visited */
-    text-decoration: none;
-    color: var(--colore-testo-sec); /* Social grigio chiaro */
-    margin: 0 10px;
-    font-weight: 500;
-}
-
-.footer-social a:hover {
-    color: var(--colore-link); /* Social hover ROSSO VINO */
-}
-
-/* --- Media Query per Cellulari (nessuna modifica qui) --- */
+/* --- Media Query per Cellulari --- */
 @media (max-width: 768px) {
     .navbar .container {
         flex-direction: column;
@@ -223,11 +184,5 @@ body {
 
     .hero h1 {
         font-size: 2.2rem;
-    }
-
-    .img-profilo-small {
-        float: none;
-        display: block;
-        margin: 0 auto 1rem auto;
     }
 }
