@@ -44,21 +44,21 @@ body {
     align-items: center;
 }
 
-.logo {
+.logo, .logo:visited { /* AGGIUNTA REGOLA :visited */
     font-size: 1.8rem;
     font-weight: bold;
     color: var(--colore-oro); /* Logo ORO */
     text-decoration: none;
 }
 
-.nav-menu a {
+.nav-menu a, .nav-menu a:visited { /* AGGIUNTA REGOLA :visited */
     text-decoration: none;
     color: var(--colore-testo-sec); /* Link menu grigio chiaro */
     font-weight: 500;
     margin-left: 20px;
 }
 
-.nav-menu a.active {
+.nav-menu a.active, .nav-menu a.active:visited { /* AGGIUNTA REGOLA :visited */
     color: var(--colore-oro); /* Link attivo ORO */
     font-weight: bold;
 }
@@ -117,7 +117,8 @@ body {
 }
 
 /* --- Bottoni (Call to Action) --- */
-.cta-button, .cta-button-small {
+.cta-button, .cta-button-small,
+.cta-button:visited, .cta-button-small:visited { /* AGGIUNTA REGOLA :visited */
     display: inline-block;
     background-color: var(--colore-link); /* Bottone ROSSO VINO */
     color: var(--colore-testo);           /* Testo bottone BIANCO */
@@ -132,7 +133,7 @@ body {
     background-color: var(--colore-link-hover); /* Rosso più scuro */
 }
 
-.cta-button-small {
+.cta-button-small, .cta-button-small:visited { /* AGGIUNTA REGOLA :visited */
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
 }
@@ -173,7 +174,7 @@ body {
 }
 
 /* --- Pagina Contatti --- */
-.social-contatti a {
+.social-contatti a, .social-contatti a:visited { /* AGGIUNTA REGOLA :visited */
     font-size: 1.1rem;
 }
 
@@ -192,7 +193,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.footer-social a {
+.footer-social a, .footer-social a:visited { /* AGGIUNTA REGOLA :visited */
     text-decoration: none;
     color: var(--colore-testo-sec); /* Social grigio chiaro */
     margin: 0 10px;
