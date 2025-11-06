@@ -1,14 +1,14 @@
-/* --- Variabili Globali (il tuo nuovo tema!) --- */
+/* --- Variabili Globali (Tema Bianco/Nero/Oro) --- */
 :root {
     --colore-oro: #DAA520;           /* Oro (per logo e titoli) */
-    --colore-link: #990000;          /* Rosso Vino (per link e bottoni) */
-    --colore-link-hover: #7a0000;    /* Rosso Vino più scuro (al passaggio) */
-    --colore-testo: #f4f4f4;         /* Bianco (per il testo) */
-    --colore-testo-sec: #bbbbbb;     /* Grigio chiaro (per sottotitoli/footer) */
-    --colore-bg: #222222;            /* Sfondo Nero Chiaro (grigio scuro) */
-    --colore-card: #333333;         /* Sfondo Card (un po' più chiaro) */
-    --colore-bordo: #555555;         /* Colore dei bordi */
-    --ombra-card: 0 5px 15px rgba(0,0,0,0.3); /* Ombra più scura */
+    --colore-link: var(--colore-oro);/* Oro (per link e bottoni) */
+    --colore-link-hover: #b8860b;    /* Oro più scuro (al passaggio) */
+    --colore-testo: #222222;         /* Nero (per il testo) */
+    --colore-testo-sec: #555555;     /* Grigio scuro (per sottotitoli) */
+    --colore-bg: #ffffff;            /* Sfondo Bianco */
+    --colore-card: #ffffff;         /* Sfondo Card Bianco */
+    --colore-bordo: #eeeeee;         /* Bordo grigio chiaro */
+    --ombra-card: 0 5px 15px rgba(0,0,0,0.1); /* Ombra leggera */
 }
 
 /* --- Reset e Stili Generali --- */
@@ -16,8 +16,8 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--colore-bg); /* Sfondo Nero Chiaro */
-    color: var(--colore-testo);         /* Testo Bianco */
+    background-color: var(--colore-bg);
+    color: var(--colore-testo);
     line-height: 1.6;
 }
 
@@ -27,40 +27,39 @@ body {
     padding: 0 20px;
 }
 
-/* --- Navbar (IL MENU BELLO È QUI) --- */
+/* --- Navbar --- */
 .navbar {
-    background-color: var(--colore-card); /* Sfondo scuro per card */
-    border-bottom: 1px solid var(--colore-bordo); /* Bordo scuro */
+    background-color: var(--colore-card);
+    border-bottom: 1px solid var(--colore-bordo);
     padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
 .navbar .container {
-    display: flex; /* METTE LOGO E MENU SULLA STESSA RIGA */
-    justify-content: space-between; /* SPINGE IL LOGO A SINISTRA E IL MENU A DESTRA */
-    align-items: center; /* LI ALLINEA AL CENTRO VERTICALMENTE */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo, .logo:visited {
     font-size: 1.8rem;
     font-weight: bold;
-    color: var(--colore-oro); /* Logo ORO */
+    color: var(--colore-oro);
     text-decoration: none;
 }
 
-/* QUESTO È LO STILE PER "Home Progetti Contatti" */
 .nav-menu a, .nav-menu a:visited {
-    text-decoration: none; /* TOGLIE SOTTOLINEATURA */
-    color: var(--colore-testo-sec); /* Link menu grigio chiaro */
+    text-decoration: none;
+    color: var(--colore-testo-sec);
     font-weight: 500;
-    margin-left: 20px; /* AGGIUNGE SPAZIO TRA I LINK */
+    margin-left: 20px;
 }
 
 .nav-menu a.active, .nav-menu a.active:visited {
-    color: var(--colore-oro); /* Link attivo ORO */
+    color: var(--colore-oro);
     font-weight: bold;
 }
 
@@ -70,52 +69,42 @@ body {
     padding: 4rem 0;
 }
 
-.hero-img {
-    /* Questo stile c'è anche se non lo usi in index.html, non fa danni */
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1.5rem;
-    border: 5px solid var(--colore-card); 
-    box-shadow: var(--ombra-card);
-}
-
 .hero h1 {
     font-size: 2.8rem;
     margin: 0;
-    color: var(--colore-oro); /* Titolo ORO */
+    color: var(--colore-oro);
 }
 
 .hero-subtitle {
     font-size: 1.3rem;
-    color: var(--colore-testo-sec); /* Sottotitolo grigio chiaro */
+    color: var(--colore-testo-sec);
     margin-bottom: 2rem;
 }
 
-/* --- Contenuto Pagina (per Progetti, Contatti) --- */
+/* --- Contenuto Pagina --- */
 .page-content {
     padding: 2rem 0;
     min-height: 60vh; 
 }
 
 .page-content h1 {
-    color: var(--colore-oro); /* Titoli ORO */
+    color: var(--colore-oro);
     text-align: center;
     margin-bottom: 2rem;
 }
 
 /* --- Card --- */
 .card {
-    background-color: var(--colore-card); /* Sfondo card scuro */
+    background-color: var(--colore-card);
     border-radius: 8px;
     box-shadow: var(--ombra-card);
     padding: 1.5rem 2rem;
     margin-bottom: 1.5rem;
+    border: 1px solid var(--colore-bordo); /* Aggiunto bordo leggero */
 }
 
 .card h2 {
-    color: var(--colore-oro); /* Titoli card ORO */
+    color: var(--colore-oro);
     margin-top: 0;
 }
 
@@ -123,8 +112,8 @@ body {
 .cta-button, .cta-button-small,
 .cta-button:visited, .cta-button-small:visited {
     display: inline-block;
-    background-color: var(--colore-link); /* Bottone ROSSO VINO */
-    color: var(--colore-testo);           /* Testo bottone BIANCO */
+    background-color: var(--colore-link); /* Bottone ORO */
+    color: var(--colore-testo);           /* Testo bottone NERO */
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
@@ -133,7 +122,7 @@ body {
 }
 
 .cta-button:hover, .cta-button-small:hover {
-    background-color: var(--colore-link-hover); /* Rosso più scuro */
+    background-color: var(--colore-link-hover);
 }
 
 .cta-button-small, .cta-button-small:visited {
@@ -148,20 +137,14 @@ body {
     gap: 1.5rem;
 }
 
-.project-img {
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
-
 /* --- Footer --- */
 .footer {
     text-align: center;
     padding: 2rem 0;
     margin-top: 2rem;
-    background-color: var(--colore-card); /* Footer scuro */
-    border-top: 1px solid var(--colore-bordo); /* Bordo scuro */
-    color: var(--colore-testo-sec); /* Testo footer grigio chiaro */
+    background-color: #f8f9fa; /* Grigio chiarissimo per staccare */
+    border-top: 1px solid var(--colore-bordo);
+    color: var(--colore-testo-sec);
     font-size: 0.9rem;
 }
 
