@@ -1,0 +1,170 @@
+/* --- Variabili Globali (Tema Scuro) --- */
+:root {
+    --colore-oro: #DAA520;           /* Oro (per logo e titoli) */
+    --colore-link: #990000;          /* Rosso Vino (per link e bottoni) */
+    --colore-link-hover: #7a0000;    /* Rosso Vino più scuro (al passaggio) */
+    --colore-testo: #f4f4f4;         /* Bianco (per il testo) */
+    --colore-testo-sec: #bbbbbb;     /* Grigio chiaro (per sottotitoli/footer) */
+    --colore-bg: #222222;            /* Sfondo Nero Chiaro (grigio scuro) */
+    --colore-card: #333333;         /* Sfondo Card (un po' più chiaro) */
+    --colore-bordo: #555555;         /* Colore dei bordi */
+    --ombra-card: 0 5px 15px rgba(0,0,0,0.3); /* Ombra più scura */
+}
+
+/* --- Reset e Stili Generali --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--colore-bg);
+    color: var(--colore-testo);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: var(--colore-card);
+    border-bottom: 1px solid var(--colore-bordo);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo, .logo:visited {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--colore-oro);
+    text-decoration: none;
+}
+
+.nav-menu a, .nav-menu a:visited {
+    text-decoration: none;
+    color: var(--colore-testo-sec);
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.nav-menu a.active, .nav-menu a.active:visited {
+    color: var(--colore-oro);
+    font-weight: bold;
+}
+
+/* --- Hero (Solo Homepage) --- */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin: 0;
+    color: var(--colore-oro);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--colore-testo-sec);
+    margin-bottom: 2rem;
+}
+
+/* --- Contenuto Pagina --- */
+.page-content {
+    padding: 2rem 0;
+    min-height: 60vh; 
+}
+
+.page-content h1 {
+    color: var(--colore-oro);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* --- Card --- */
+.card {
+    background-color: var(--colore-card);
+    border-radius: 8px;
+    box-shadow: var(--ombra-card);
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.card h2 {
+    color: var(--colore-oro);
+    margin-top: 0;
+}
+
+/* --- Bottoni (Call to Action) --- */
+.cta-button, .cta-button-small,
+.cta-button:visited, .cta-button-small:visited {
+    display: inline-block;
+    background-color: var(--colore-link);
+    color: var(--colore-testo);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 0.8rem 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover, .cta-button-small:hover {
+    background-color: var(--colore-link-hover);
+}
+
+.cta-button-small, .cta-button-small:visited {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* --- Griglia Progetti --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    background-color: var(--colore-card);
+    border-top: 1px solid var(--colore-bordo);
+    color: var(--colore-testo-sec);
+    font-size: 0.9rem;
+}
+
+/* --- Media Query per Cellulari --- */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+
+    .nav-menu {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    .nav-menu a {
+        margin-left: 0;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
