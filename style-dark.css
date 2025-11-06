@@ -170,7 +170,7 @@ body {
 }
 /* --- Stile per Immagine Academy (uguale alla Home) --- */
 .home-hero-image {
-    max-width: 70%; /* La dimensione media che avevi chiesto */
+    max-width: 75%; /* La dimensione media che avevi chiesto */
     height: auto;
     display: block;
     margin: 2rem auto;
