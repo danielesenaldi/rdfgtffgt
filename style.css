@@ -171,7 +171,7 @@ body {
 }
 /* --- Stile per Immagine Home --- */
 .home-hero-image {
-    max-width: 100%; /* L'immagine non sarà mai più larga della pagina */
+    max-width: 60%; /* L'immagine non sarà mai più larga della pagina */
     height: auto;    /* L'altezza si adatta per non deformare l'immagine */
     display: block;  /* Necessario per centrarla */
     margin: 2rem auto; /* 2rem di spazio sopra/sotto, 'auto' la centra */
