@@ -101,7 +101,7 @@ body {
     box-shadow: var(--ombra-card);
     padding: 1.5rem 2rem;
     margin-bottom: 1.5rem;
-    /* Transizione hover RIMOSSA come richiesto */
+    /* Transizione e hover RIMOSSI come richiesto dai quadrati di Academy */
 }
 
 .card h2 {
@@ -109,7 +109,7 @@ body {
     margin-top: 0;
 }
 
-/* Blocco .card:hover RIMOSSO come richiesto */
+/* Blocco .card:hover RIMOSSO */
 
 
 /* --- Bottoni (Call to Action) --- */
@@ -158,14 +158,13 @@ body {
     height: auto;
     display: block;
     margin: 2rem auto;
-    animation: fadeInUp 1s ease-out forwards; /* 1. IMMAGINE A COMPARSA */
-    transition: all 0.3s ease-out; /* <-- AGGIUNTO: Prepara per hover */
+    animation: fadeInUp 1s ease-out forwards; /* L'immagine appare */
+    transition: transform 0.3s ease-out; /* Prepara per l'ingrandimento */
 }
 
-/* 2. EFFETTO MOUSE (SOLLEVAMENTO) SULL'IMMAGINE */
+/* EFFETTO INGRANDIMENTO MOUSE SULL'IMMAGINE */
 .home-hero-image:hover {
-    transform: translateY(-5px); /* Solleva l'immagine */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5); /* Aumenta l'ombra */
+    transform: scale(1.05); /* L'immagine si ingrandisce del 5% */
 }
 
 
