@@ -167,6 +167,12 @@ body {
     height: auto;
     display: block;
     margin: 2rem auto;
+    transition: transform 0.3s ease-out; /* <-- AGGIUNGI QUESTA RIGA */
+}
+
+/* EFFETTO INGRANDIMENTO MOUSE SULL'IMMAGINE HOME */
+.home-hero-image:hover { /* <-- AGGIUNGI QUESTO NUOVO BLOCCO */
+    transform: scale(1.05); /* L'immagine si ingrandisce del 5% */
 }
 
 /* --- Definizione Animazione (per i titoli) --- */
