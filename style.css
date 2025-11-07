@@ -17,6 +17,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--colore-bg);
+    /* Se vuoi la texture, decommenta le 3 righe sotto */
+    /* background-image: url("immagini/texture-chiara.png"); */
+    /* background-repeat: repeat; */
+    /* background-attachment: fixed; */
     color: var(--colore-testo);
     line-height: 1.6;
 }
@@ -91,6 +95,7 @@ body {
     color: var(--colore-oro);
     text-align: center;
     margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out forwards; /* Animazione titolo */
 }
 
 /* --- Card --- */
@@ -100,7 +105,8 @@ body {
     box-shadow: var(--ombra-card);
     padding: 1.5rem 2rem;
     margin-bottom: 1.5rem;
-    border: 1px solid var(--colore-bordo); /* Aggiunto bordo leggero */
+    border: 1px solid var(--colore-bordo);
+    /* Transizione hover RIMOSSA dai quadrati */
 }
 
 .card h2 {
@@ -108,12 +114,15 @@ body {
     margin-top: 0;
 }
 
+/* Blocco .card:hover RIMOSSO */
+
+
 /* --- Bottoni (Call to Action) --- */
 .cta-button, .cta-button-small,
 .cta-button:visited, .cta-button-small:visited {
     display: inline-block;
-    background-color: var(--colore-link); /* Bottone ORO */
-    color: var(--colore-testo);           /* Testo bottone NERO */
+    background-color: var(--colore-link);
+    color: var(--colore-testo);
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
@@ -142,11 +151,33 @@ body {
     text-align: center;
     padding: 2rem 0;
     margin-top: 2rem;
-    background-color: #f8f9fa; /* Grigio chiarissimo per staccare */
+    background-color: #f8f9fa;
     border-top: 1px solid var(--colore-bordo);
     color: var(--colore-testo-sec);
     font-size: 0.9rem;
 }
+
+/* --- Stile per Immagine Home --- */
+.home-hero-image {
+    max-width: 60%; 
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    /* (Nessun effetto hover qui) */
+}
+
+/* --- Definizione Animazione (per i titoli) --- */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* --- Media Query per Cellulari --- */
 @media (max-width: 768px) {
@@ -168,11 +199,4 @@ body {
     .hero h1 {
         font-size: 2.2rem;
     }
-}
-/* --- Stile per Immagine Home --- */
-.home-hero-image {
-    max-width: 40%; /* L'immagine non sarà mai più larga della pagina */
-    height: auto;    /* L'altezza si adatta per non deformare l'immagine */
-    display: block;  /* Necessario per centrarla */
-    margin: 2rem auto; /* 2rem di spazio sopra/sotto, 'auto' la centra */
 }
