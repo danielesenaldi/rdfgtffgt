@@ -163,7 +163,7 @@ body {
 
 /* --- Stile per Immagine Home --- */
 .home-hero-image {
-    max-width: 60%; 
+    max-width: 45%; 
     height: auto;
     display: block;
     margin: 2rem auto;
