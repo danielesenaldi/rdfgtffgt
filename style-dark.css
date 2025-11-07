@@ -91,6 +91,7 @@ body {
     color: var(--colore-oro);
     text-align: center;
     margin-bottom: 2rem;
+    /* Animazione titolo RIMOSSA come richiesto */
 }
 
 /* --- Card --- */
@@ -100,12 +101,16 @@ body {
     box-shadow: var(--ombra-card);
     padding: 1.5rem 2rem;
     margin-bottom: 1.5rem;
+    /* Transizione hover RIMOSSA come richiesto */
 }
 
 .card h2 {
     color: var(--colore-oro);
     margin-top: 0;
 }
+
+/* Blocco .card:hover RIMOSSO come richiesto */
+
 
 /* --- Bottoni (Call to Action) --- */
 .cta-button, .cta-button-small,
@@ -147,6 +152,35 @@ body {
     font-size: 0.9rem;
 }
 
+/* --- Stile per Immagine Academy --- */
+.home-hero-image {
+    max-width: 60%; 
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    animation: fadeInUp 1s ease-out forwards; /* 1. IMMAGINE A COMPARSA */
+    transition: all 0.3s ease-out; /* <-- AGGIUNTO: Prepara per hover */
+}
+
+/* 2. EFFETTO MOUSE (SOLLEVAMENTO) SULL'IMMAGINE */
+.home-hero-image:hover {
+    transform: translateY(-5px); /* Solleva l'immagine */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5); /* Aumenta l'ombra */
+}
+
+
+/* --- Definizione Animazione (serve per l'immagine) --- */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* --- Media Query per Cellulari --- */
 @media (max-width: 768px) {
     .navbar .container {
@@ -167,11 +201,4 @@ body {
     .hero h1 {
         font-size: 2.2rem;
     }
-}
-/* --- Stile per Immagine Academy (uguale alla Home) --- */
-.home-hero-image {
-    max-width: 75%; /* La dimensione media che avevi chiesto */
-    height: auto;
-    display: block;
-    margin: 2rem auto;
 }
