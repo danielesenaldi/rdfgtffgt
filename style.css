@@ -215,7 +215,7 @@ body.home-page {
     background-color: var(--colore-bg); /* Colore di riserva */
 
     /* Assicurati che il nome 'texture-chiara.png' sia esatto */
-    background-image: url("immagini/texture-chiara.png");
+    background-image: url("immagini/sfondo-sito-home.jpg");
 
     background-repeat: repeat; /* Ripete la texture per coprire tutto */
     background-attachment: fixed; /* Fissa lo sfondo mentre scorri (effetto pro) */
