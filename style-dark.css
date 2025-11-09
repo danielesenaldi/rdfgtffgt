@@ -91,6 +91,7 @@ body {
     color: var(--colore-oro);
     text-align: center;
     margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out forwards; /* <-- MODIFICATA! (Usa l'animazione che sale) */
 }
 
 /* --- Card --- */
@@ -119,11 +120,9 @@ body {
     padding: 0.8rem 1.5rem;
     transition: background-color 0.3s ease;
 }
-
 .cta-button:hover, .cta-button-small:hover {
     background-color: var(--colore-link-hover);
 }
-
 .cta-button-small, .cta-button-small:visited {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
@@ -153,43 +152,50 @@ body {
     height: auto;
     display: block;
     margin: 2rem auto;
-    animation: fadeIn 2s ease-out forwards;   /* <-- MODIFICATA (ora si chiama fadeIn) */
-    transition: transform 0.3s ease-out; /* Prepara per l'ingrandimento */
+    animation: fadeIn 2s ease-out forwards;   /* L'immagine usa ancora la dissolvenza semplice (giusto) */
+    transition: transform 0.3s ease-out; 
 }
-
-/* EFFETTO INGRANDIMENTO MOUSE SULL'IMMAGINE */
 .home-hero-image:hover {
-    transform: scale(1.05); /* L'immagine si ingrandisce del 5% */
+    transform: scale(1.05);
 }
 
-
-/* --- Definizione Animazione (solo dissolvenza) --- */
-@keyframes fadeIn { /* <-- MODIFICATA (si chiama fadeIn e non ha transform) */
+/* --- Definizione Animazione (solo dissolvenza per l'immagine) --- */
+@keyframes fadeIn {
     0% {
-        opacity: 0; /* All'inizio è invisibile */
+        opacity: 0;
     }
     100% {
-        opacity: 1; /* Alla fine è visibile */
+        opacity: 1;
     }
 }
+
+/* --- Definizione Animazione (per il titolo, come sulla Home) --- */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* --- Media Query per Cellulari --- */
 @media (max-width: 768px) {
     .navbar .container {
         flex-direction: column;
     }
-
     .nav-menu {
         margin-top: 1rem;
         display: flex;
         justify-content: space-around;
         width: 100%;
     }
-    
     .nav-menu a {
         margin-left: 0;
     }
-
     .hero h1 {
         font-size: 2.2rem;
     }
