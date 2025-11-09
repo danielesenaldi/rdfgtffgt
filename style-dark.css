@@ -91,7 +91,7 @@ body {
     color: var(--colore-oro);
     text-align: center;
     margin-bottom: 2rem;
-    animation: fadeInUp 1s ease-out forwards; /* <-- MODIFICATA! (Usa l'animazione che sale) */
+    animation: fadeInUp 3s ease-out forwards; /* <-- MODIFICATA! (Usa l'animazione che sale) */
 }
 
 /* --- Card --- */
