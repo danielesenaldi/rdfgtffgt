@@ -83,7 +83,8 @@ body {
     margin: 0 auto 2rem auto;
     max-width: 300px;
     height: auto;
-    animation: fadeInUp 1s ease-out forwards;
+    animation: fadeInUp 1.2s ease-out forwards; /* L'animazione parte un po' più lenta */
+    animation-delay: 0.3s; /* Parte dopo un piccolo ritardo */
 }
 
 /* --- Card (Stile Teca) --- */
@@ -91,133 +92,14 @@ body {
     background-color: var(--colore-card);
     border-radius: 8px;
     box-shadow: var(--ombra-card);
-    padding: 0; 
+    padding: 0; /* Padding gestito dal card-content */
     margin-bottom: 1.5rem;
     border: 1px solid var(--colore-bordo);
-    transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out; /* Effetto lift sulla card */
     overflow: hidden; 
-    position: relative; /* Per posizionare l'overlay */
+    position: relative; 
 }
 
+/* Effetto lift quando si passa il mouse sulla card */
 .card:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-}
-
-/* Contenitore immagine per l'effetto hover */
-.project-img-container {
-    width: 100%;
-    height: 250px; /* Altezza fissa delle copertine nella griglia */
-    overflow: hidden; /* Nasconde ciò che esce */
-    position: relative; /* Per l'overlay */
-}
-
-.project-img {
-    width: 100%;
-    height: 100%; /* L'immagine riempie il suo contenitore */
-    object-fit: cover; /* Ritaglia l'immagine per riempire */
-    display: block;
-}
-
-/* Overlay per l'immagine ingrandita */
-.project-img-overlay {
-    position: fixed; /* Si posiziona sopra tutto */
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8); /* Sfondo semi-trasparente scuro */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0; /* Inizialmente invisibile */
-    pointer-events: none; /* Non blocca gli eventi del mouse quando è invisibile */
-    transition: opacity 0.3s ease;
-    z-index: 200; /* Sopra la navbar */
-}
-
-.project-img-overlay img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain; /* L'immagine intera si adatta senza ritagliare */
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    transform: scale(0.8); /* Inizia più piccola */
-    transition: transform 0.3s ease;
-}
-
-/* Quando si passa il mouse sull'immagine */
-.project-img-container:hover .project-img-overlay {
-    opacity: 1; /* Rende visibile l'overlay */
-    pointer-events: auto; /* Abilita gli eventi del mouse */
-}
-
-/* Quando l'overlay è visibile, ingrandisce l'immagine */
-.project-img-container:hover .project-img-overlay img {
-    transform: scale(1);
-}
-
-
-.card-content {
-    padding: 1.5rem;
-}
-
-.card-content h3 {
-    font-weight: bold;
-    color: var(--colore-testo);
-    margin-top: 0;
-}
-
-.book-price {
-    display: block;
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: var(--colore-teca);
-    margin-top: 1rem;
-    text-align: right;
-}
-
-/* --- Griglia Progetti (Marketplace) --- */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-}
-
-/* --- Footer --- */
-.footer {
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 2rem;
-    background-color: #f8f9fa;
-    border-top: 1px solid var(--colore-bordo);
-    color: var(--colore-testo-sec);
-    font-size: 0.9rem;
-}
-
-/* --- Definizione Animazione (per il logo della pagina) --- */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* --- Media Query per Cellulari --- */
-@media (max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-    }
-    .nav-menu {
-        margin-top: 1rem;
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-    }
-    .nav-menu a {
-        margin-left: 0;
-    }
-}
+    transform
