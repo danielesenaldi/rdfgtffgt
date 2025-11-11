@@ -82,13 +82,13 @@ body {
     height: auto;
     animation: fadeInUp 1.2s ease-out forwards; 
     animation-delay: 0.3s;
-    transition: all 0.3s ease-out; /* Aggiungi transizione per l'hover */
+    transition: all 0.3s ease-out; /* Prepara per l'hover */
 }
 
-/* EFFETTO: il logo si solleva */
+/* EFFETTO: il logo si solleva SENZA OMBRA */
 .page-logo:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.12); /* Ombra identica alle card */
+    transform: translateY(-5px); /* Solleva il logo */
+    /* Ombra rimossa come richiesto */
 }
 
 /* --- Card (Stile Teca) --- */
@@ -113,17 +113,17 @@ body {
 /* --- IMMAGINE DEL LIBRO (Corretta) --- */
 .project-img {
     width: 100%;
-    height: 250px;
-    object-fit: contain;
+    height: 250px; /* Un'altezza fissa per il "box" dell'immagine */
+    object-fit: contain; /* Questo mostra l'immagine INTERA dentro il box */
     display: block;
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Sfondo grigio chiaro se l'immagine ha barre laterali */
     box-sizing: border-box;
-    padding: 10px;
+    /* Padding rimosso per farla stare in cima */
 }
 
 .card-content {
     padding: 1.5rem;
-    padding-top: 0.5rem;
+    /* padding-top rimosso per farla stare sotto l'immagine */
 }
 
 .card-content h3 {
@@ -142,4 +142,47 @@ body {
 }
 
 /* --- Griglia Progetti (Marketplace) --- */
-.
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid var(--colore-bordo);
+    color: var(--colore-testo-sec);
+    font-size: 0.9rem;
+}
+
+/* --- Definizione Animazione (per il logo della pagina) --- */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Media Query per Cellulari --- */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+    .nav-menu {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .nav-menu a {
+        margin-left: 0;
+    }
+}
