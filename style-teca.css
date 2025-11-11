@@ -84,11 +84,11 @@ body {
     animation-delay: 0.3s;
     transition: all 0.3s ease-out; /* Prepara per l'hover */
 }
-
 /* EFFETTO: il logo si solleva SENZA OMBRA */
 .page-logo:hover {
-    transform: translateY(-5px); /* Solleva il logo */
+    transform: translateY(-5px); /* <-- AGGIUNGI QUESTA RIGA */
     /* Ombra rimossa come richiesto */
+}
 }
 
 /* --- Card (Stile Teca) --- */
