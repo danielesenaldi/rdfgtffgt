@@ -80,11 +80,108 @@ body {
     margin: 0 auto 2rem auto;
     max-width: 300px;
     height: auto;
-    animation: fadeInUp 1.2s ease-out forwards; /* <-- 1. ANIMAZIONE INGRESSO */
+    animation: fadeInUp 1.2s ease-out forwards; /* <-- 1. ANIMAZIONE INGRESSO (FadeInUp) */
     animation-delay: 0.3s;
     transition: transform 0.3s ease-out; /* <-- PREPARA PER IL MOUSE */
 }
 
 /* EFFETTO: il logo si solleva SENZA OMBRA */
 .page-logo:hover {
-    transform: translateY(-5px); /* <-- 2. EFFETTO M
+    transform: translateY(-5px); /* <-- 2. EFFETTO MOUSE (Sollevamento) */
+}
+
+/* --- Card (Stile Teca) --- */
+.card {
+    background-color: var(--colore-card);
+    border-radius: 8px;
+    box-shadow: var(--ombra-card);
+    padding: 0; 
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--colore-bordo);
+    transition: all 0.3s ease-out; /* Effetto lift sulla card */
+    overflow: hidden; 
+    position: relative; 
+}
+
+/* UNICO EFFETTO: la card si solleva */
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* --- IMMAGINE DEL LIBRO (Layout "quadratino") --- */
+.project-img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain; /* Mostra l'immagine intera */
+    display: block;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.card-content {
+    padding: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+.card-content h3 {
+    font-weight: bold;
+    color: var(--colore-testo);
+    margin-top: 0;
+}
+
+.book-price {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--colore-teca); /* Prezzo VERDE */
+    margin-top: 1rem;
+    text-align: right;
+}
+
+/* --- Griglia Progetti (Marketplace) --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid var(--colore-bordo);
+    color: var(--colore-testo-sec);
+    font-size: 0.9rem;
+}
+
+/* --- Definizione Animazione (per il logo della pagina) --- */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Media Query per Cellulari --- */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+    .nav-menu {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .nav-menu a {
+        margin-left: 0;
+    }
+}
