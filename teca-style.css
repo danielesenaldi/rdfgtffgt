@@ -1,9 +1,9 @@
 /* --- Variabili Globali (Tema TECA - Stile Chiaro + Verde) --- */
 :root {
-    --colore-teca: #679261;          /* <-- VERDE del logo Teca */
-    --colore-teca-hover: #4e7a46;    /* <-- VERDE più scuro */
+    --colore-teca: #679261;          /* Verde Chiaro (per hover) */
+    --colore-teca-hover: #4e7a46;    /* Verde Scuro (per link attivo) */
     --colore-testo: #222222;         /* Nero */
-    --colore-testo-sec: #555555;     /* Grigio scuro */
+    --colore-testo-sec: #555555;     /* Grigio scuro (per link inattivi) */
     --colore-bg: #ffffff;            /* Sfondo Bianco */
     --colore-card: #ffffff;         /* Card Bianca */
     --colore-bordo: #eeeeee;         /* Bordo grigio chiaro */
@@ -31,7 +31,7 @@ body {
     background-color: var(--colore-card);
     border-bottom: 1px solid var(--colore-bordo);
     padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Ombra leggera come sulla Home */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -43,7 +43,6 @@ body {
     align-items: center;
 }
 
-/* Stile per il logo immagine (come l'avevamo fatto) */
 .navbar .logo-img {
     height: 40px; 
     width: auto;
@@ -51,15 +50,23 @@ body {
     margin: 0;
 }
 
+/* Link normali (grigi) */
 .nav-menu a, .nav-menu a:visited {
     text-decoration: none;
     color: var(--colore-testo-sec);
     font-weight: 500;
     margin-left: 20px;
+    transition: color 0.3s ease; /* Aggiunge transizione */
 }
 
+/* Hover sui link normali (diventano VERDE CHIARO) */
+.nav-menu a:hover {
+    color: var(--colore-teca);
+}
+
+/* Link attivo (VERDE SCURO) */
 .nav-menu a.active, .nav-menu a.active:visited {
-    color: var(--colore-teca); /* Link attivo VERDE */
+    color: var(--colore-teca-hover); /* <-- MODIFICATO! */
     font-weight: bold;
 }
 
@@ -70,10 +77,10 @@ body {
 }
 
 .page-content h1 {
-    color: var(--colore-teca); /* Titolo VERDE */
+    color: var(--colore-teca); /* Titolo VERDE CHIARO */
     text-align: center;
     margin-bottom: 2rem;
-    animation: fadeInUp 1s ease-out forwards; /* Stessa animazione "slide-in" */
+    animation: fadeInUp 1s ease-out forwards; 
 }
 
 /* --- Card (Stile Teca, identico alla Home) --- */
@@ -81,31 +88,28 @@ body {
     background-color: var(--colore-card);
     border-radius: 8px;
     box-shadow: var(--ombra-card);
-    padding: 0; /* Padding gestito dall'immagine e da .card-content */
+    padding: 0; 
     margin-bottom: 1.5rem;
     border: 1px solid var(--colore-bordo);
-    transition: all 0.3s ease-out; /* Stesso effetto "lift" */
+    transition: all 0.3s ease-out; 
     overflow: hidden; 
 }
 
-/* Stesso effetto "Lift" al passaggio del mouse */
 .card:hover {
     transform: translateY(-5px); 
     box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
-/* Contenuto della card (per Titolo, Trama, Prezzo) */
 .card-content {
     padding: 1.5rem;
 }
 
 .card-content h3 {
     font-weight: bold;
-    color: var(--colore-testo); /* Titolo libro nero, come da logo */
+    color: var(--colore-testo);
     margin-top: 0;
 }
 
-/* Immagine del libro */
 .project-img {
     width: 100%;
     height: 250px;
@@ -113,12 +117,11 @@ body {
     margin-bottom: 0;
 }
 
-/* Stile per il prezzo */
 .book-price {
     display: block;
     font-size: 1.3rem;
     font-weight: bold;
-    color: var(--colore-teca); /* Prezzo VERDE */
+    color: var(--colore-teca); /* Prezzo VERDE CHIARO */
     margin-top: 1rem;
     text-align: right;
 }
@@ -135,7 +138,7 @@ body {
     text-align: center;
     padding: 2rem 0;
     margin-top: 2rem;
-    background-color: #f8f9fa; /* Grigio chiaro come la Home */
+    background-color: #f8f9fa;
     border-top: 1px solid var(--colore-bordo);
     color: var(--colore-testo-sec);
     font-size: 0.9rem;
