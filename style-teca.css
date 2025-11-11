@@ -1,13 +1,13 @@
 /* --- Variabili Globali (Tema TECA - Barra Verde) --- */
 :root {
-    --colore-teca: #679261;          /* Verde del logo Teca */
-    --colore-teca-hover: #4e7a46;    /* Verde più scuro */
-    --colore-testo: #222222;         /* Nero */
-    --colore-testo-sec: #555555;     /* Grigio scuro */
-    --colore-bg: #ffffff;            /* Sfondo Bianco */
-    --colore-card: #ffffff;         /* Card Bianca */
-    --colore-bordo: #eeeeee;         /* Bordo grigio chiaro */
-    --ombra-card: 0 5px 15px rgba(0,0,0,0.1); /* Ombra leggera */
+    --colore-teca: #679261;
+    --colore-teca-hover: #4e7a46;
+    --colore-testo: #222222;
+    --colore-testo-sec: #555555;
+    --colore-bg: #ffffff;
+    --colore-card: #ffffff;
+    --colore-bordo: #eeeeee;
+    --ombra-card: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* --- Reset e Stili Generali --- */
@@ -80,15 +80,14 @@ body {
     margin: 0 auto 2rem auto;
     max-width: 300px;
     height: auto;
-    animation: fadeInUp 1.2s ease-out forwards; 
+    animation: fadeInUp 1.2s ease-out forwards; /* <-- 1. ANIMAZIONE INGRESSO */
     animation-delay: 0.3s;
-    transition: all 0.3s ease-out; /* Prepara per l'hover */
+    transition: transform 0.3s ease-out; /* <-- Prepara per l'hover */
 }
+
 /* EFFETTO: il logo si solleva SENZA OMBRA */
 .page-logo:hover {
-    transform: translateY(-5px); /* <-- AGGIUNGI QUESTA RIGA */
-    /* Ombra rimossa come richiesto */
-}
+    transform: translateY(-5px); /* <-- 2. EFFETTO MOUSE */
 }
 
 /* --- Card (Stile Teca) --- */
@@ -113,17 +112,17 @@ body {
 /* --- IMMAGINE DEL LIBRO (Corretta) --- */
 .project-img {
     width: 100%;
-    height: 250px; /* Un'altezza fissa per il "box" dell'immagine */
-    object-fit: contain; /* Questo mostra l'immagine INTERA dentro il box */
+    height: 250px;
+    object-fit: contain;
     display: block;
-    background-color: #f9f9f9; /* Sfondo grigio chiaro se l'immagine ha barre laterali */
+    background-color: #f9f9f9;
     box-sizing: border-box;
-    /* Padding rimosso per farla stare in cima */
+    padding: 10px;
 }
 
 .card-content {
     padding: 1.5rem;
-    /* padding-top rimosso per farla stare sotto l'immagine */
+    padding-top: 0.5rem;
 }
 
 .card-content h3 {
@@ -151,38 +150,4 @@ body {
 /* --- Footer --- */
 .footer {
     text-align: center;
-    padding: 2rem 0;
-    margin-top: 2rem;
-    background-color: #f8f9fa;
-    border-top: 1px solid var(--colore-bordo);
-    color: var(--colore-testo-sec);
-    font-size: 0.9rem;
-}
-
-/* --- Definizione Animazione (per il logo della pagina) --- */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* --- Media Query per Cellulari --- */
-@media (max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-    }
-    .nav-menu {
-        margin-top: 1rem;
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-    }
-    .nav-menu a {
-        margin-left: 0;
-    }
-}
+    padding: 2rem
