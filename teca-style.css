@@ -93,6 +93,7 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
+/* Contenuto della card (per Titolo, Trama, Prezzo) */
 .card-content {
     padding: 1.5rem;
 }
@@ -103,6 +104,7 @@ body {
     margin-top: 0;
 }
 
+/* Immagine del libro */
 .project-img {
     width: 100%;
     height: 250px;
@@ -110,6 +112,7 @@ body {
     margin-bottom: 0;
 }
 
+/* Stile per il prezzo */
 .book-price {
     display: block;
     font-size: 1.3rem;
