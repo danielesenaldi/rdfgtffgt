@@ -1,13 +1,13 @@
 /* --- Variabili Globali (Tema TECA - Barra Verde) --- */
 :root {
-    --colore-teca: #679261;          /* Verde del logo Teca */
-    --colore-teca-hover: #4e7a46;    /* Verde più scuro */
-    --colore-testo: #222222;         /* Nero */
-    --colore-testo-sec: #555555;     /* Grigio scuro */
-    --colore-bg: #ffffff;            /* Sfondo Bianco */
-    --colore-card: #ffffff;         /* Card Bianca */
-    --colore-bordo: #eeeeee;         /* Bordo grigio chiaro */
-    --ombra-card: 0 5px 15px rgba(0,0,0,0.1); /* Ombra leggera */
+    --colore-teca: #679261;
+    --colore-teca-hover: #4e7a46;
+    --colore-testo: #222222;
+    --colore-testo-sec: #555555;
+    --colore-bg: #ffffff;
+    --colore-card: #ffffff;
+    --colore-bordo: #eeeeee;
+    --ombra-card: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* --- Reset e Stili Generali --- */
@@ -74,21 +74,24 @@ body {
     min-height: 60vh; 
 }
 
-/* Logo Teca sulla pagina */
+/* 1. ANIMAZIONE INGRESSO (sul contenitore) */
+.page-logo-wrapper {
+    animation: fadeInUp 1.2s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+/* Logo Teca sulla pagina (dentro il wrapper) */
 .page-logo {
     display: block;
     margin: 0 auto 2rem auto;
     max-width: 300px;
     height: auto;
-    opacity: 0; /* Inizia invisibile per la dissolvenza */
-    animation: fadeIn 1s ease-out forwards; /* Animazione di dissolvenza (fade in) */
-    animation-delay: 0.3s; /* Ritardo prima di apparire */
-    transition: transform 0.3s ease-out; /* Per l'effetto del mouse */
+    transition: transform 0.3s ease-out; /* Prepara per l'hover */
 }
 
-/* EFFETTO: il logo si solleva SENZA OMBRA quando ci passi sopra */
+/* 2. EFFETTO MOUSE (sul logo) */
 .page-logo:hover {
-    transform: translateY(-5px); /* Solleva il logo */
+    transform: translateY(-5px); 
 }
 
 /* --- Card (Stile Teca) --- */
@@ -99,31 +102,30 @@ body {
     padding: 0; 
     margin-bottom: 1.5rem;
     border: 1px solid var(--colore-bordo);
-    transition: all 0.3s ease-out; /* Effetto lift sulla card */
+    transition: all 0.3s ease-out; 
     overflow: hidden; 
     position: relative; 
 }
 
-/* UNICO EFFETTO: la card si solleva */
 .card:hover {
     transform: translateY(-5px); 
     box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
-/* --- IMMAGINE DEL LIBRO (PICCOLA E INTERA, NEL "QUADRATINO") --- */
+/* --- IMMAGINE DEL LIBRO (Layout "quadratino") --- */
 .project-img {
     width: 100%;
-    height: 250px; /* Altezza fissa del "box" per l'immagine */
-    object-fit: contain; /* L'immagine INTERA si adatta al box, senza tagli */
+    height: 250px;
+    object-fit: contain; 
     display: block;
-    background-color: #f9f9f9; /* Sfondo chiaro per le barre se l'immagine non è 100% riempita */
-    box-sizing: border-box; /* Include padding e bordo nel calcolo della dimensione */
-    padding: 10px; /* Un po' di aria intorno all'immagine */
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 .card-content {
     padding: 1.5rem;
-    padding-top: 0.5rem; /* Meno spazio tra immagine e testo */
+    padding-top: 0.5rem;
 }
 
 .card-content h3 {
@@ -136,7 +138,7 @@ body {
     display: block;
     font-size: 1.3rem;
     font-weight: bold;
-    color: var(--colore-teca); /* Prezzo VERDE */
+    color: var(--colore-teca); 
     margin-top: 1rem;
     text-align: right;
 }
@@ -159,13 +161,15 @@ body {
     font-size: 0.9rem;
 }
 
-/* --- Definizione Animazione FADE IN (SOLO DISSOLVENZA) --- */
-@keyframes fadeIn {
+/* --- Definizione Animazione (per il wrapper del logo) --- */
+@keyframes fadeInUp {
     0% {
         opacity: 0;
+        transform: translateY(20px);
     }
     100% {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
