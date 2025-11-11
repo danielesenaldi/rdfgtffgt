@@ -1,4 +1,4 @@
-/* --- Variabili Globali (Tema TECA - Stile Chiaro + Verde) --- */
+/* --- Variabili Globali (Tema TECA - Barra Verde) --- */
 :root {
     --colore-teca: #679261;          /* Verde del logo Teca */
     --colore-teca-hover: #4e7a46;    /* Verde più scuro */
@@ -26,12 +26,12 @@ body {
     padding: 0 20px;
 }
 
-/* --- Navbar (Stile Teca) --- */
+/* --- Navbar (Stile Teca - SFONDO VERDE) --- */
 .navbar {
-    background-color: var(--colore-card); /* <-- SFONDO BIANCO */
-    border-bottom: 1px solid var(--colore-bordo); /* Bordo grigio */
+    background-color: var(--colore-teca); /* <-- SFONDO VERDE */
+    border-bottom: 1px solid var(--colore-teca-hover);
     padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -43,31 +43,31 @@ body {
     align-items: center;
 }
 
-.navbar .logo-img {
-    height: 40px; 
-    width: auto;
-    display: block;
-    margin: 0;
+/* Logo Salomon♕ (BIANCO) */
+.navbar .logo, .navbar .logo:visited {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff; /* <-- BIANCO */
+    text-decoration: none;
 }
 
-/* Link normali (Grigi) */
+/* Link normali (BIANCHI) */
 .nav-menu a, .nav-menu a:visited {
     text-decoration: none;
-    color: var(--colore-testo-sec);
+    color: #ffffff; /* <-- BIANCO */
     font-weight: 500;
     margin-left: 20px;
     transition: color 0.3s ease;
+    opacity: 0.8;
 }
-
-/* Hover sui link normali (Verde Chiaro) */
 .nav-menu a:hover {
-    color: var(--colore-teca);
+    color: #ffffff;
+    opacity: 1;
 }
-
-/* Link attivo (VERDE SCURO) */
 .nav-menu a.active, .nav-menu a.active:visited {
-    color: var(--colore-teca-hover);
+    color: #ffffff; /* <-- BIANCO */
     font-weight: bold;
+    opacity: 1;
 }
 
 /* --- Contenuto Pagina --- */
@@ -76,12 +76,20 @@ body {
     min-height: 60vh; 
 }
 
+/* Rimosso H1, stile aggiunto al logo */
 .page-content h1 {
-    color: var(--colore-teca); /* Titolo VERDE */
-    text-align: center;
-    margin-bottom: 2rem;
-    animation: fadeInUp 1s ease-out forwards; 
+    display: none; /* Nascondiamo il vecchio titolo */
 }
+
+/* NUOVO: Stile per il Logo Teca sulla pagina */
+.page-logo {
+    display: block;
+    margin: 0 auto 2rem auto; /* 0 sopra, auto cent., 2rem sotto */
+    max-width: 300px; /* Dimensione (puoi cambiarla) */
+    height: auto;
+    animation: fadeInUp 1s ease-out forwards; /* Animazione ingresso */
+}
+
 
 /* --- Card (Stile Teca, identico alla Home) --- */
 .card {
@@ -144,7 +152,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* --- Definizione Animazione (per il titolo) --- */
+/* --- Definizione Animazione (per il logo) --- */
 @keyframes fadeInUp {
     0% {
         opacity: 0;
