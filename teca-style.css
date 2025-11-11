@@ -1,1 +1,166 @@
+/* --- Variabili Globali (Tema TECA MARKETPLACE con Logo) --- */
+:root {
+    --colore-teca: #679261;          /* Verde del logo Teca */
+    --colore-link-hover: #4e7a46;    /* Verde più scuro al passaggio */
+    --colore-testo: #212121;         /* Nero (non grigio, più netto) */
+    --colore-testo-sec: #616161;     /* Grigio scuro per sottotitoli */
+    --colore-bg: #ffffff;            /* Sfondo Bianco Puro */
+    --colore-card: #ffffff;         /* Sfondo Card Bianco */
+    --colore-bordo: #e0e0e0;         /* Bordo grigio chiaro, pulito */
+    --ombra-card: 0 2px 8px rgba(0,0,0,0.07); /* Ombra molto sottile */
+}
 
+/* --- Reset e Stili Generali --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--colore-bg);
+    color: var(--colore-testo);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Navbar (Stile Teca) --- */
+.navbar {
+    background-color: var(--colore-card);
+    border-bottom: 1px solid var(--colore-bordo);
+    padding: 1rem 0;
+    box-shadow: var(--ombra-card);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- Stile specifico per il logo immagine --- */
+.navbar .logo-img {
+    height: 40px; /* Altezza del logo, puoi modificarla */
+    width: auto;
+    display: block;
+    margin: 0;
+}
+
+.nav-menu a, .nav-menu a:visited {
+    text-decoration: none;
+    color: var(--colore-testo-sec);
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.nav-menu a.active, .nav-menu a.active:visited {
+    color: var(--colore-teca); /* <<-- VERDE! */
+    font-weight: bold;
+}
+
+/* --- Contenuto Pagina --- */
+.page-content {
+    padding: 2rem 0;
+    min-height: 60vh; 
+}
+
+.page-content h1 {
+    color: var(--colore-teca); /* <<-- VERDE! */
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* --- Card (Stile Teca) --- */
+.card {
+    background-color: var(--colore-card);
+    border-radius: 8px;
+    box-shadow: var(--ombra-card);
+    padding: 0;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--colore-bordo);
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    font-weight: bold;
+    color: var(--colore-testo); /* Titolo libro nero */
+    margin-top: 0;
+}
+
+.project-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 0;
+}
+
+.book-price {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--colore-teca); /* <<-- PREZZO IN VERDE! */
+    margin-top: 1rem;
+    text-align: right;
+}
+
+/* --- Griglia Progetti (Marketplace) --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid var(--colore-bordo);
+    color: var(--colore-testo-sec);
+    font-size: 0.9rem;
+}
+
+/* --- Definizione Animazione (per il titolo) --- */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Media Query per Cellulari --- */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+    .nav-menu {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .nav-menu a {
+        margin-left: 0;
+    }
+}
