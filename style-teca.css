@@ -28,8 +28,8 @@ body {
 
 /* --- Navbar (Stile Teca) --- */
 .navbar {
-    background-color: var(--colore-teca); /* <-- SFONDO VERDE */
-    border-bottom: 1px solid var(--colore-teca-hover); /* Bordo verde scuro */
+    background-color: var(--colore-card); /* <-- SFONDO BIANCO */
+    border-bottom: 1px solid var(--colore-bordo); /* Bordo grigio */
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     position: sticky;
@@ -50,27 +50,24 @@ body {
     margin: 0;
 }
 
-/* Link normali (BIANCHI) */
+/* Link normali (Grigi) */
 .nav-menu a, .nav-menu a:visited {
     text-decoration: none;
-    color: #ffffff; /* <-- BIANCO */
+    color: var(--colore-testo-sec);
     font-weight: 500;
     margin-left: 20px;
     transition: color 0.3s ease;
-    opacity: 0.8; /* Leggermente trasparenti */
 }
 
-/* Hover sui link normali (Bianco pieno) */
+/* Hover sui link normali (Verde Chiaro) */
 .nav-menu a:hover {
-    color: #ffffff;
-    opacity: 1;
+    color: var(--colore-teca);
 }
 
-/* Link attivo (Bianco pieno e GRASSETTO) */
+/* Link attivo (VERDE SCURO) */
 .nav-menu a.active, .nav-menu a.active:visited {
-    color: #ffffff; /* <-- BIANCO */
+    color: var(--colore-teca-hover);
     font-weight: bold;
-    opacity: 1;
 }
 
 /* --- Contenuto Pagina --- */
