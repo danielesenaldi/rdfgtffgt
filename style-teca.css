@@ -80,9 +80,9 @@ body {
     margin: 0 auto 2rem auto;
     max-width: 300px;
     height: auto;
-    animation: fadeInUp 1.2s ease-out forwards; /* <-- 1. ANIMAZIONE INGRESSO */
+    animation: fadeInUp 1.2s ease-out forwards; /* <-- 1. ANIMAZIONE INGRESSO (RI-AGGIUNTA) */
     animation-delay: 0.3s;
-    transition: transform 0.3s ease-out; /* <-- Prepara per l'hover */
+    transition: all 0.3s ease-out; /* Prepara per l'hover */
 }
 
 /* EFFETTO: il logo si solleva SENZA OMBRA */
@@ -150,4 +150,38 @@ body {
 /* --- Footer --- */
 .footer {
     text-align: center;
-    padding: 2rem
+    padding: 2rem 0;
+    margin-top: 2rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid var(--colore-bordo);
+    color: var(--colore-testo-sec);
+    font-size: 0.9rem;
+}
+
+/* --- Definizione Animazione (RI-AGGIUNTA) --- */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Media Query per Cellulari --- */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+    .nav-menu {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .nav-menu a {
+        margin-left: 0;
+    }
+}
