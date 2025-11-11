@@ -1,9 +1,9 @@
 /* --- Variabili Globali (Tema TECA - Stile Chiaro + Verde) --- */
 :root {
-    --colore-teca: #679261;          /* Verde Chiaro (per hover) */
-    --colore-teca-hover: #4e7a46;    /* Verde Scuro (per link attivo) */
+    --colore-teca: #679261;          /* Verde del logo Teca */
+    --colore-teca-hover: #4e7a46;    /* Verde più scuro */
     --colore-testo: #222222;         /* Nero */
-    --colore-testo-sec: #555555;     /* Grigio scuro (per link inattivi) */
+    --colore-testo-sec: #555555;     /* Grigio scuro */
     --colore-bg: #ffffff;            /* Sfondo Bianco */
     --colore-card: #ffffff;         /* Card Bianca */
     --colore-bordo: #eeeeee;         /* Bordo grigio chiaro */
@@ -28,8 +28,8 @@ body {
 
 /* --- Navbar (Stile Teca) --- */
 .navbar {
-    background-color: var(--colore-card);
-    border-bottom: 1px solid var(--colore-bordo);
+    background-color: var(--colore-teca); /* <-- SFONDO VERDE */
+    border-bottom: 1px solid var(--colore-teca-hover); /* Bordo verde scuro */
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     position: sticky;
@@ -50,24 +50,27 @@ body {
     margin: 0;
 }
 
-/* Link normali (grigi) */
+/* Link normali (BIANCHI) */
 .nav-menu a, .nav-menu a:visited {
     text-decoration: none;
-    color: var(--colore-testo-sec);
+    color: #ffffff; /* <-- BIANCO */
     font-weight: 500;
     margin-left: 20px;
-    transition: color 0.3s ease; /* Aggiunge transizione */
+    transition: color 0.3s ease;
+    opacity: 0.8; /* Leggermente trasparenti */
 }
 
-/* Hover sui link normali (diventano VERDE CHIARO) */
+/* Hover sui link normali (Bianco pieno) */
 .nav-menu a:hover {
-    color: var(--colore-teca);
+    color: #ffffff;
+    opacity: 1;
 }
 
-/* Link attivo (VERDE SCURO) */
+/* Link attivo (Bianco pieno e GRASSETTO) */
 .nav-menu a.active, .nav-menu a.active:visited {
-    color: var(--colore-teca-hover); /* <-- MODIFICATO! */
+    color: #ffffff; /* <-- BIANCO */
     font-weight: bold;
+    opacity: 1;
 }
 
 /* --- Contenuto Pagina --- */
@@ -77,7 +80,7 @@ body {
 }
 
 .page-content h1 {
-    color: var(--colore-teca); /* Titolo VERDE CHIARO */
+    color: var(--colore-teca); /* Titolo VERDE */
     text-align: center;
     margin-bottom: 2rem;
     animation: fadeInUp 1s ease-out forwards; 
@@ -121,7 +124,7 @@ body {
     display: block;
     font-size: 1.3rem;
     font-weight: bold;
-    color: var(--colore-teca); /* Prezzo VERDE CHIARO */
+    color: var(--colore-teca); /* Prezzo VERDE */
     margin-top: 1rem;
     text-align: right;
 }
