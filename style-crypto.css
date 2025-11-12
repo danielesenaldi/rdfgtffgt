@@ -18,7 +18,7 @@ body {
     /* SFONDO MAGICO CHE RESPIRA (con viola) */
     background: linear-gradient(-45deg, #1a1a1a, #2a2a2a, #1a1a1a, #4d004d);
     background-size: 400% 400%;
-    animation: animateGradient 10s ease infinite; /* <-- PIÙ VELOCE */
+    animation: animateGradient 7s ease infinite; /* <-- ANCORA PIÙ VELOCE */
     color: var(--colore-testo);
     line-height: 1.6;
 }
@@ -37,8 +37,9 @@ body {
     bottom: -20px; 
     background: var(--colore-crypto); /* Saranno VIOLA */
     border-radius: 50%;
-    opacity: 0.5; /* <-- PIÙ VISIBILI */
+    opacity: 0.8; /* <-- MOLTO PIÙ VISIBILI */
     animation: floatUp 20s infinite linear;
+    box-shadow: 0 0 5px var(--colore-crypto), 0 0 10px var(--colore-crypto); /* <-- EFFETTO GLOW */
 }
 
 @keyframes floatUp {
@@ -141,33 +142,4 @@ body {
     background-color: var(--colore-card);
     border-top: 1px solid var(--colore-bordo);
     color: var(--colore-testo-sec);
-    font-size: 0.9rem;
-}
-
-/* --- Definizione Animazione (per il titolo) --- */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* --- Media Query per Cellulari --- */
-@media (max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-    }
-    .nav-menu {
-        margin-top: 1rem;
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-    }
-    .nav-menu a {
-        margin-left: 0;
-    }
-}
+    font
