@@ -1,0 +1,159 @@
+/* --- Variabili Globali (Tema CRYPTO - Stile Chiaro ORO/BIANCO) --- */
+:root {
+    --colore-oro: #DAA520;           /* Oro (per logo e titoli) */
+    --colore-link: var(--colore-oro);/* Oro (per link e bottoni) */
+    --colore-link-hover: #b8860b;    /* Oro più scuro (al passaggio) */
+    --colore-testo: #222222;         /* Nero (per il testo) */
+    --colore-testo-sec: #555555;     /* Grigio scuro (per sottotitoli) */
+    --colore-bg: #ffffff;            /* Sfondo Bianco */
+    --colore-card: #ffffff;         /* Sfondo Card Bianco */
+    --colore-bordo: #eeeeee;         /* Bordo grigio chiaro */
+    --ombra-card: 0 5px 15px rgba(0,0,0,0.1); /* Ombra leggera */
+}
+
+/* --- Reset e Stili Generali --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--colore-bg);
+    color: var(--colore-testo);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: var(--colore-card);
+    border-bottom: 1px solid var(--colore-bordo);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo, .logo:visited {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--colore-oro);
+    text-decoration: none;
+}
+
+.nav-menu a, .nav-menu a:visited {
+    text-decoration: none;
+    color: var(--colore-testo-sec);
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.nav-menu a.active, .nav-menu a.active:visited {
+    color: var(--colore-oro);
+    font-weight: bold;
+}
+
+/* --- Hero (per la Home) --- */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin: 0;
+    color: var(--colore-oro);
+    animation: fadeIn 2s ease-out forwards; 
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--colore-testo-sec);
+    margin-bottom: 2rem;
+}
+
+/* --- Contenuto Pagina (per Crypto) --- */
+.page-content {
+    padding: 2rem 0;
+    min-height: 60vh; 
+}
+
+.page-content h1 {
+    color: var(--colore-oro);
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+/* --- Card --- */
+.card {
+    background-color: var(--colore-card);
+    border-radius: 8px;
+    box-shadow: var(--ombra-card);
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--colore-bordo);
+    transition: all 0.3s ease-out; /* Effetto "lift" per i quadrati */
+}
+
+.card h2 {
+    color: var(--colore-oro);
+    margin-top: 0;
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* --- Immagine Home --- */
+.home-hero-image {
+    max-width: 50%; 
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    transition: transform 0.3s ease-out; 
+}
+.home-hero-image:hover {
+    transform: scale(1.05); 
+}
+
+/* --- Definizione Animazione (per i titoli) --- */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* --- Media Query per Cellulari --- */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+    .nav-menu {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .nav-menu a {
+        margin-left: 0;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
