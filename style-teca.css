@@ -74,22 +74,17 @@ body {
     min-height: 60vh; 
 }
 
-/* 1. ANIMAZIONE INGRESSO (sul contenitore) */
-.page-logo-wrapper {
-    animation: fadeInUp 1.2s ease-out forwards;
-    animation-delay: 0.3s;
-}
-
-/* Logo Teca sulla pagina (dentro il wrapper) */
+/* Logo Teca sulla pagina */
 .page-logo {
     display: block;
     margin: 0 auto 2rem auto;
     max-width: 300px;
     height: auto;
-    transition: transform 0.3s ease-out; /* Prepara per l'hover */
+    animation: fadeInUp 1.2s ease-out forwards;
+    animation-delay: 0.3s;
+    transition: transform 0.3s ease-out; 
 }
 
-/* 2. EFFETTO MOUSE (sul logo) */
 .page-logo:hover {
     transform: translateY(-5px); 
 }
@@ -161,7 +156,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* --- Definizione Animazione (per il wrapper del logo) --- */
+/* --- Definizione Animazione (per il logo della pagina) --- */
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -186,5 +181,28 @@ body {
     }
     .nav-menu a {
         margin-left: 0;
+    }
+
+    /* --- ECCO LA MODIFICA PER LA GRIGLIA TECA --- */
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr); /* Due colonne */
+        gap: 1rem; /* Meno spazio tra le card */
+    }
+    .project-img {
+        height: 180px; /* Immagine un po' più piccola su mobile */
+    }
+    .card-content {
+        padding: 1rem; /* Meno padding interno */
+    }
+    .card-content h3 {
+        font-size: 1rem; /* Titolo più piccolo */
+    }
+    .card-content p {
+        font-size: 0.85rem; /* Testo più piccolo */
+        line-height: 1.4;
+    }
+    .book-price {
+        font-size: 1rem; /* Prezzo più piccolo */
+        margin-top: 0.5rem;
     }
 }
