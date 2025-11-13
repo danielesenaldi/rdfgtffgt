@@ -49,6 +49,13 @@ body {
     /* 2. Transizione per l'effetto hover */
     transition: transform 0.3s ease-out; 
     -webkit-transition: -webkit-transform 0.3s ease-out;
+    /* Incolla questo blocco SUBITO DOPO quello sopra, se manca */
+
+/* 2. Effetto "ingrandisce" al passaggio del mouse */
+.crypto-hero-image:hover {
+    transform: scale(1.08); /* Si ingrandisce un po' */
+    -webkit-transform: scale(1.08);
+}
 }
 
 /* 2. Effetto "ingrandisce" al passaggio del mouse */
