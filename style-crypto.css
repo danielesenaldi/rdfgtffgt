@@ -43,8 +43,8 @@ body {
     animation: fadeInUp 1s ease-out forwards; 
     -webkit-animation: fadeInUp 1s ease-out forwards; /* Per Safari/iOS */
     opacity: 0; /* Inizia trasparente */
-    animation-delay: 0.2s; 
-    -webkit-animation-delay: 0.2s;
+    animation-delay: 1s; 
+    -webkit-animation-delay: 1s;
 
     /* 2. Transizione per l'effetto hover */
     transition: transform 0.3s ease-out; 
