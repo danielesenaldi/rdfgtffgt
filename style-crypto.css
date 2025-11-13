@@ -56,7 +56,6 @@ body {
     transform: scale(1.08); /* Si ingrandisce un po' */
     -webkit-transform: scale(1.08);
 }
-}
 
 /* 2. Effetto "ingrandisce" al passaggio del mouse */
 .crypto-hero-image:hover {
