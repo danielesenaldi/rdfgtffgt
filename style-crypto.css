@@ -1,86 +1,86 @@
 /* --- Variabili Globali (Tema CRYPTO - Viola/Nero) --- */
 :root {
-    --colore-crypto: #9933FF;
-    --colore-crypto-hover: #7A28CC;
-    --colore-testo: #f4f4f4;
-    --colore-testo-sec: #bbbbbb;
-    --colore-bg: #1a1a1a;
-    --colore-card: #2a2a2a;
-    --colore-bordo: #444444;
-    --ombra-card: 0 5px 15px rgba(0,0,0,0.3);
+    --colore-crypto: #9933FF;
+    --colore-crypto-hover: #7A28CC;
+    --colore-testo: #f4f4f4;
+    --colore-testo-sec: #bbbbbb;
+    --colore-bg: #1a1a1a;
+    --colore-card: #2a2a2a;
+    --colore-bordo: #444444;
+    --ombra-card: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 /* --- Reset e Stili Generali --- */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(-45deg, #1a1a1a, #2a2a2a, #1a1a1a, #660066);
-    background-size: 600% 600%;
-    -webkit-animation: animateGradient 7s ease infinite;
-    animation: animateGradient 7s ease infinite; 
-    color: var(--colore-testo);
-    line-height: 1.6;
-    box-shadow: inset 0 0 100px rgba(153, 51, 255, 0.2); 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #1a1a1a, #2a2a2a, #1a1a1a, #660066);
+    background-size: 600% 600%;
+    -webkit-animation: animateGradient 7s ease infinite;
+    animation: animateGradient 7s ease infinite; 
+    color: var(--colore-testo);
+    line-height: 1.6;
+    box-shadow: inset 0 0 100px rgba(153, 51, 255, 0.2); 
 }
 
 .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* --- Navbar (Stile Crypto) --- */
 .navbar {
-    background-color: var(--colore-card);
-    border-bottom: 1px solid var(--colore-bordo);
-    padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    background-color: var(--colore-card);
+    border-bottom: 1px solid var(--colore-bordo);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar .logo, .navbar .logo:visited {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: var(--colore-crypto);
-    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--colore-crypto);
+    text-decoration: none;
 }
 
 .nav-menu a, .nav-menu a:visited {
-    text-decoration: none;
-    color: var(--colore-testo-sec);
-    font-weight: 500;
-    margin-left: 20px;
-    transition: color 0.3s ease;
+    text-decoration: none;
+    color: var(--colore-testo-sec);
+    font-weight: 500;
+    margin-left: 20px;
+    transition: color 0.3s ease;
 }
 .nav-menu a:hover {
-    color: var(--colore-crypto);
+    color: var(--colore-crypto);
 }
 .nav-menu a.active, .nav-menu a.active:visited {
-    color: var(--colore-crypto);
-    font-weight: bold;
+    color: var(--colore-crypto);
+    font-weight: bold;
 }
 
 /* --- Contenuto Pagina --- */
 .page-content {
-    padding: 2rem 0;
-    min-height: 60vh; 
+    padding: 2rem 0;
+    min-height: 60vh; 
 }
 
 .page-content h1 {
-    color: var(--colore-crypto); 
-    text-align: center;
-    margin-bottom: 2rem;
-    -webkit-animation: fadeInUp 1s ease-out forwards;
-    animation: fadeInUp 1s ease-out forwards;
+    color: var(--colore-crypto); 
+    text-align: center;
+    margin-bottom: 2rem;
+    -webkit-animation: fadeInUp 1s ease-out forwards;
+    animation: fadeInUp 1s ease-out forwards;
 }
 
 /* --- Immagine Discord --- */
@@ -110,138 +110,141 @@ body {
 
 /* --- Card (Stile Crypto) --- */
 .card {
-    background-color: var(--colore-card);
-    border-radius: 8px;
-    box-shadow: var(--ombra-card);
-    padding: 1.5rem 2rem;
-    margin-bottom: 1.5rem;
-    border: 1px solid var(--colore-bordo);
-    transition: all 0.3s ease-out; 
+    background-color: var(--colore-card);
+    border-radius: 8px;
+    box-shadow: var(--ombra-card);
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--colore-bordo);
+    transition: all 0.3s ease-out; 
 }
 
 .card:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 10px 20px rgba(153, 51, 255, 0.2); 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(153, 51, 255, 0.2); 
 }
 
 .card h2 {
-    color: var(--colore-crypto);
-    margin-top: 0;
+    color: var(--colore-crypto);
+    margin-top: 0;
 }
 
 /* --- Bottone (Stile Crypto) --- */
 .cta-button-crypto,
 .cta-button-crypto:visited {
-    display: inline-block;
-    background-color: var(--colore-crypto);
-    color: var(--colore-testo);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    padding: 0.8rem 1.5rem;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease;
-    
-    /* Centra il bottone dentro la card */
-    margin-left: auto;
-    margin-right: auto;
-    display: block; 
-    width: fit-content;
+    display: inline-block;
+    background-color: var(--colore-crypto);
+    color: var(--colore-testo);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 0.8rem 1.5rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+    
+    /* Centra il bottone dentro la card */
+    margin-left: auto;
+    margin-right: auto;
+    display: block; 
+    width: fit-content;
 }
 
 .cta-button-crypto:hover {
-    background-color: var(--colore-crypto-hover);
+    background-color: var(--colore-crypto-hover);
 }
 
 /* --- Footer --- */
 .footer {
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 2rem;
-    background-color: var(--colore-card);
-    border-top: 1px solid var(--colore-bordo);
-    color: var(--colore-testo-sec);
-    font-size: 0.9rem;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    background-color: var(--colore-card);
+    border-top: 1px solid var(--colore-bordo);
+    color: var(--colore-testo-sec);
+    font-size: 0.9rem;
 }
 
 /* --- Particelle Fluttuanti --- */
 .particles {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: -1; 
-    overflow: hidden;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1; 
+    overflow: hidden;
 }
 
 .particle {
-    position: absolute;
-    bottom: -20px; 
-    background: var(--colore-crypto); 
-    border-radius: 50%;
-    opacity: 0.8; 
-    -webkit-animation: floatUp 20s infinite linear;
-    animation: floatUp 20s infinite linear;
-    box-shadow: 0 0 7px var(--colore-crypto), 0 0 15px var(--colore-crypto); 
+    position: absolute;
+    bottom: -20px; 
+    background: var(--colore-crypto); 
+    border-radius: 50%;
+    opacity: 0.8; 
+    -webkit-animation: floatUp 20s infinite linear;
+    animation: floatUp 20s infinite linear;
+    box-shadow: 0 0 7px var(--colore-crypto), 0 0 15px var(--colore-crypto); 
 }
 
 /* --- Definizioni Animazioni --- */
 @keyframes floatUp {
-    to {
-        transform: translateY(-110vh); 
-        opacity: 0;
-    }
+    to {
+        transform: translateY(-110vh); 
+        opacity: 0;
+    }
 }
 @keyframes animateGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 @keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* --- Definizioni Animazioni (PER COMPATIBILITÀ MOBILE) --- */
 @-webkit-keyframes floatUp {
-    to {
-        -webkit-transform: translateY(-110vh);
-        transform: translateY(-110vh); 
-        opacity: 0;
-    }
+    to {
+        -webkit-transform: translateY(-110vh);
+        transform: translateY(-110vh); 
+        opacity: 0;
+    }
 }
 @-webkit-keyframes animateGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 @-webkit-keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(20px);
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
 }
 
-/* --- Media Query per Cellulari --- */
+/* --- Media Query per Cellulari (CORRETTO) --- */
 @media (max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-    }
-    .nav-menu {
-        margin-top: 1rem;
-        display: flex;
-        justify-content: space-around;
-  M     width: 100%;
-    }
-  }
+    .navbar .container {
+        flex-direction: column;
+    }
+    .nav-menu {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .nav-menu a {
+        margin-left: 0;
+    }
+}
