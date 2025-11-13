@@ -57,11 +57,6 @@ body {
     -webkit-transform: scale(1.08);
 }
 
-/* Stile per il link che avvolge l'immagine */
-.discord-image-link {
-    display: block;
-    text-align: center;
-}
 
 /* --- Bottone (Stile Crypto) --- */
 .cta-button-crypto,
