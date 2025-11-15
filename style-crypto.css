@@ -100,6 +100,10 @@ body {
     /* 2. Transizione per l'effetto hover (FONDAMENTALE) */
     transition: transform 0.3s ease-out; 
     -webkit-transition: transform 0.3s ease-out;
+
+    /* ----- NUOVE REGOLE PER LA SOLUZIONE ----- */
+    position: relative; /* <-- AGGIUNGI QUESTO */
+    top: 20px;          /* <-- AGGIUNGI QUESTO (è la posiz. di partenza) */
 }
 
 /* 2. Effetto "ingrandisce" al passaggio del mouse */
