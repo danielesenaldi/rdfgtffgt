@@ -11,16 +11,20 @@
     --ombra-card: 0 5px 15px rgba(0,0,0,0.1); /* Ombra leggera */
 }
 
-/* --- Reset e Stili Generali --- */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--colore-bg);
-    /* Se vuoi la texture, decommenta le 3 righe sotto */
-    /* background-image: url("immagini/texture-chiara.png"); */
-    /* background-repeat: repeat; */
-    /* background-attachment: fixed; */
+    
+    /* --- NUOVO SFONDO --- */
+    background-color: var(--colore-bg); /* Colore di riserva */
+    background-image: url("immagini/texture-nuvole.png"); /* <--- CONTROLLA IL NOME DEL FILE! */
+    background-repeat: repeat;       /* Ripeti l'immagine */
+    background-attachment: fixed;    /* Fissa l'immagine mentre scorri (importante per l'effetto!) */
+    background-position: center 0;   /* Posizione di partenza */
+    background-size: 500px;          /* Grandezza nuvole (puoi cambiarla se vuoi) */
+    /* -------------------- */
+
     color: var(--colore-testo);
     line-height: 1.6;
 }
