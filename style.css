@@ -115,18 +115,23 @@ body {
 
 /* --- Card --- */
 .card {
-    background-color: var(--colore-card);
-    border-radius: 8px;
-    box-shadow: var(--ombra-card);
-    padding: 1.5rem 2rem;
+    background-color: #6f94a4; /* Il tuo colore */
+    color: #ffffff; /* <--- IMPORTANTE: Testo bianco per leggerlo sul blu */
+    
+    border-radius: 12px; /* Angoli arrotondati */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Ombra per staccarlo dallo sfondo */
+    padding: 2rem;
     margin-bottom: 1.5rem;
-    border: 1px solid var(--colore-bordo);
-    transition: all 0.3s ease-out; /* <-- RI-AGGIUNTA TRANSIZIONE PER HOVER */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Bordino leggero */
+    transition: transform 0.3s ease;
 }
 
 .card h2 {
-    color: var(--colore-oro);
+    color: var(--colore-oro); /* Titolo Oro */
     margin-top: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Linea separatrice sottile */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 /* RI-AGGIUNTO EFFETTO "Lift" al passaggio del mouse */
@@ -135,6 +140,10 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.12); /* Ombra più grande */
 }
 
+.card a {
+    color: var(--colore-oro);
+    font-weight: bold;
+}
 
 /* --- Bottoni (Call to Action) --- */
 .cta-button, .cta-button-small,
