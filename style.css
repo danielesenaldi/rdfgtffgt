@@ -158,8 +158,10 @@ body {
 .cta-button, .cta-button-small,
 .cta-button:visited, .cta-button-small:visited {
     display: inline-block;
-    background-color: var(--colore-link);
-    color: var(--colore-testo);
+    background-color: var(--colore-link); /* Sfondo Oro */
+    
+    color: #ffffff; /* <--- MODIFICA: Testo Bianco per contrasto massimo */
+    
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
@@ -167,6 +169,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* La regola per l'hover rimane invariata, dato che cambia solo lo sfondo */
 .cta-button:hover, .cta-button-small:hover {
     background-color: var(--colore-link-hover);
 }
