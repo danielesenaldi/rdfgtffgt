@@ -95,9 +95,15 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
-    color: var(--colore-testo-sec);
+    font-size: 1.5rem; /* L'ho fatta leggermente più grande */
+    color: #ffffff;    /* Bianco puro */
     margin-bottom: 2rem;
+    
+    /* Questa ombra è il segreto: crea un contorno scuro sfumato dietro la scritta */
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8); 
+    
+    font-weight: 600; /* Un po' più "cicciotto" per essere più leggibile */
+    letter-spacing: 1px; /* Spazia leggermente le lettere per eleganza */
 }
 
 /* --- Contenuto Pagina --- */
