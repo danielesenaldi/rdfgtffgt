@@ -175,14 +175,17 @@ body {
 }
 
 /* --- Footer --- */
+/* --- Footer --- */
 .footer {
+    background-color: #6f94a4; /* Il tuo colore */
+    color: #ffffff; /* Testo bianco */
+    
     text-align: center;
     padding: 2rem 0;
-    margin-top: 2rem;
-    background-color: #f8f9fa;
-    border-top: 1px solid var(--colore-bordo);
-    color: var(--colore-testo-sec);
-    font-size: 0.9rem;
+    margin-top: 3rem;
+    border-top: 4px solid var(--colore-oro); /* Una linea Oro sopra per chiudere in bellezza */
+    font-size: 0.95rem;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
 }
 
 /* --- Stile per Immagine Home --- */
