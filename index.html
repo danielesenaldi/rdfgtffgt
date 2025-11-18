@@ -47,6 +47,17 @@
             <p>&copy; 2025 - 𝐒𝐚𝐥𝐨𝐦𝐨𝐧♕. Tutti i diritti riservati.</p>
         </div>
     </footer>
-
+<script>
+        window.addEventListener('scroll', function() {
+            // Calcola quanto hai scorso la pagina
+            var scrolled = window.pageYOffset;
+            
+            // VELOCITÀ (0.3 è lenta, 0.5 più veloce)
+            var speed = 0.3; 
+            
+            // Sposta lo sfondo più lentamente del resto
+            document.body.style.backgroundPosition = 'center ' + -(scrolled * speed) + 'px';
+        });
+    </script>
 </body>
 </html>
