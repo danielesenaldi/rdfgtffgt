@@ -37,10 +37,10 @@ body {
 
 /* --- Navbar --- */
 .navbar {
-    background-color: var(--colore-card);
-    border-bottom: 1px solid var(--colore-bordo);
+    background-color: #6f94a4; /* <--- IL TUO NUOVO COLORE AVIO */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Bordo semitrasparente più elegante */
     padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Un'ombra leggermente più presente */
     position: sticky;
     top: 0;
     z-index: 100;
@@ -55,20 +55,30 @@ body {
 .logo, .logo:visited {
     font-size: 1.8rem;
     font-weight: bold;
-    color: var(--colore-oro);
+    color: var(--colore-oro); /* L'oro su questo blu sta benissimo! */
     text-decoration: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2); /* Leggera ombra per far spiccare il logo */
 }
 
+/* --- Link del Menu --- */
 .nav-menu a, .nav-menu a:visited {
     text-decoration: none;
-    color: var(--colore-testo-sec);
+    color: #ffffff; /* <--- TESTO BIANCO (prima era grigio) per leggerlo sul blu */
     font-weight: 500;
     margin-left: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Effetto quando passi sopra col mouse */
+.nav-menu a:hover {
+    color: var(--colore-oro); /* Diventa color oro */
+    transform: translateY(-2px); /* Si alza leggermente */
 }
 
 .nav-menu a.active, .nav-menu a.active:visited {
-    color: var(--colore-oro);
+    color: var(--colore-oro); /* La pagina attiva resta color oro */
     font-weight: bold;
+    border-bottom: 2px solid var(--colore-oro); /* Sottolineatura oro per la pagina attiva */
 }
 
 /* --- Hero (Solo Homepage) --- */
