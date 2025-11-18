@@ -159,22 +159,24 @@ body {
 .cta-button:visited, .cta-button-small:visited {
     display: inline-block;
     
-    /* COLORE ORO DEFINITO DIRETTAMENTE PER SICUREZZA */
-    background-color: #D4AF37; /* <--- Questo è il codice esadecimale dell'Oro */
+    /* COLORE ORO SOLIDO */
+    background-color: #D4AF37; 
     
-    color: #ffffff; /* Testo Bianco per contrasto massimo */
+    color: #ffffff !important; /* <--- CORREZIONE: Forziamo il testo a BIANCO */
+    
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     padding: 0.8rem 1.5rem;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Aggiungo un'ombra per farlo spiccare */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+    white-space: nowrap; 
 }
 
 /* Regola per l'hover (quando ci passi sopra col mouse) */
 .cta-button:hover, .cta-button-small:hover {
-    background-color: #C0A12E; /* Una tonalità leggermente più scura di oro per l'hover */
-    transform: translateY(-1px); /* Piccolo effetto di sollevamento */
+    background-color: #C0A12E;
+    transform: translateY(-2px); 
 }
 
 /* Dimensione per i bottoni più piccoli (come quelli dei social) */
