@@ -92,6 +92,9 @@ body {
     margin: 0;
     color: var(--colore-oro);
     animation: fadeInUp 1s ease-out forwards;
+    
+    /* Aggiungi questa riga anche qui se non c'è */
+    text-shadow: 0 3px 6px rgba(0,0,0,0.7); 
 }
 
 .hero-subtitle {
