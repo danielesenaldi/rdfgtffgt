@@ -18,7 +18,7 @@ body {
     
     /* --- NUOVO SFONDO --- */
     background-color: var(--colore-bg); /* Colore di riserva */
-    background-image: url("immagini/texture-nuvole.png"); /* <--- CONTROLLA IL NOME DEL FILE! */
+    background-image: url("immagini/texture-nuvole.jpg"); /* <--- CONTROLLA IL NOME DEL FILE! */
     background-repeat: repeat;       /* Ripeti l'immagine */
     background-attachment: fixed;    /* Fissa l'immagine mentre scorri (importante per l'effetto!) */
     background-position: center 0;   /* Posizione di partenza */
