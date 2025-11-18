@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatti - 𝐒𝐚𝐥𝐨𝐦𝐨𝐧♕</title>
+    <title>Social - 𝐒𝐚𝐥𝐨𝐦𝐨𝐧♕</title>
     <link rel="stylesheet" href="style.css">
-     <link rel="icon" type="image/png" href="immagini/favicon.png">
+    <link rel="icon" type="image/png" href="immagini/favicon.png">
 </head>
 <body>
 
@@ -17,20 +17,55 @@
                 <a href="progetti.html">Progetti</a>
                 <a href="social.html" class="active">Social</a>
                 <a href="academy.html">Academy</a>
-            <a href="teca.html">Teca</a> 
-            <a href="crypto.html">Crypto</a>
+                <a href="teca.html">Teca</a>
+                <a href="crypto.html">Crypto</a>
             </nav>
         </div>
     </header>
 
     <main class="container page-content">
-        <h1>Contattami</h1>
-        <p>Hai un'idea o un progetto? Parliamone.</p>
+        
+        <h1 style="text-shadow: 0 3px 6px rgba(0,0,0,0.7);">Social Network</h1>
+        <p class="hero-subtitle">Rimani connesso con l'Impero.</p>
 
-        <div class="card">
-            <h2>Scrivimi una Email</h2>
-            <p>Il modo più semplice per contattarmi è inviarmi un'email. Rispondo di solito entro 24 ore.</p>
-            <a href="mailto:tua-email@esempio.com" class="cta-button">Invia un'email</a>
+        <div class="social-list">
+
+            <div class="card social-row">
+                <img src="immagini/instagram-icon.png" alt="Instagram" class="social-icon">
+                <div class="social-info">
+                    <h2>Instagram</h2>
+                    <span>Foto, Storie & Lifestyle</span>
+                </div>
+                <a href="https://instagram.com/TUO-LINK" target="_blank" class="cta-button-small">Segui</a>
+            </div>
+
+            <div class="card social-row">
+                <img src="immagini/x-icon.png" alt="X" class="social-icon">
+                <div class="social-info">
+                    <h2>X</h2>
+                    <span>News in tempo reale</span>
+                </div>
+                <a href="https://twitter.com/TUO-LINK" target="_blank" class="cta-button-small">Segui</a>
+            </div>
+
+            <div class="card social-row">
+                <img src="immagini/telegram-icon.png" alt="Telegram" class="social-icon">
+                <div class="social-info">
+                    <h2>Telegram</h2>
+                    <span>Canale Ufficiale & Community</span>
+                </div>
+                <a href="https://t.me/TUO-LINK" target="_blank" class="cta-button-small">Unisciti</a>
+            </div>
+
+            <div class="card social-row">
+                <img src="immagini/facebook-icon.png" alt="Facebook" class="social-icon">
+                <div class="social-info">
+                    <h2>Facebook</h2>
+                    <span>Pagina Ufficiale</span>
+                </div>
+                <a href="https://facebook.com/TUO-LINK" target="_blank" class="cta-button-small">Segui</a>
+            </div>
+
         </div>
 
     </main>
@@ -40,6 +75,14 @@
             <p>&copy; 2025 - 𝐒𝐚𝐥𝐨𝐦𝐨𝐧♕. Tutti i diritti riservati.</p>
         </div>
     </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var scrolled = window.pageYOffset;
+            var speed = 0.3; 
+            document.body.style.backgroundPosition = 'center ' + -(scrolled * speed) + 'px';
+        });
+    </script>
 
 </body>
 </html>
