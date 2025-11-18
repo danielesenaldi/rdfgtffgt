@@ -245,3 +245,54 @@ body {
         font-size: 2.2rem;
     }
 }
+/* --- STILE PER PAGINA SOCIAL (Icone Piccole) --- */
+
+.social-list {
+    max-width: 600px; /* Ho stretto un po' la lista per farla più compatta */
+    margin: 0 auto;
+}
+
+.social-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem; /* Meno padding verticale per card più snelle */
+    gap: 20px;
+}
+
+/* ICONE PICCOLE */
+.social-icon {
+    width: 45px;  /* <--- Dimensione ridotta come richiesto */
+    height: 45px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.social-info {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 10px; /* Un po' di spazio tra icona e testo */
+}
+
+.social-info h2 {
+    margin: 0;
+    font-size: 1.2rem; /* Titolo un po' più piccolo ed elegante */
+    border: none;
+    padding: 0;
+}
+
+.social-info span {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    font-weight: 400;
+}
+
+/* Responsive per cellulari */
+@media (max-width: 480px) {
+    .social-row {
+        padding: 1rem;
+    }
+    .social-info h2 {
+        font-size: 1.1rem;
+    }
+}
