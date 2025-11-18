@@ -158,22 +158,26 @@ body {
 .cta-button, .cta-button-small,
 .cta-button:visited, .cta-button-small:visited {
     display: inline-block;
-    background-color: var(--colore-link); /* Sfondo Oro */
     
-    color: #ffffff; /* <--- MODIFICA: Testo Bianco per contrasto massimo */
+    /* COLORE ORO DEFINITO DIRETTAMENTE PER SICUREZZA */
+    background-color: #D4AF37; /* <--- Questo è il codice esadecimale dell'Oro */
     
+    color: #ffffff; /* Testo Bianco per contrasto massimo */
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     padding: 0.8rem 1.5rem;
     transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Aggiungo un'ombra per farlo spiccare */
 }
 
-/* La regola per l'hover rimane invariata, dato che cambia solo lo sfondo */
+/* Regola per l'hover (quando ci passi sopra col mouse) */
 .cta-button:hover, .cta-button-small:hover {
-    background-color: var(--colore-link-hover);
+    background-color: #C0A12E; /* Una tonalità leggermente più scura di oro per l'hover */
+    transform: translateY(-1px); /* Piccolo effetto di sollevamento */
 }
 
+/* Dimensione per i bottoni più piccoli (come quelli dei social) */
 .cta-button-small, .cta-button-small:visited {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
