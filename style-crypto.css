@@ -30,9 +30,17 @@ body {
     padding: 0 20px;
 }
 
-/* --- Navbar (Stile Crypto) --- */
+/* --- Navbar (in style-crypto.css) --- */
 .navbar {
-    background-color: var(--colore-card);
+    /* Base scura con la texture nuvola sopra */
+    background-image: url("immagini/texture-crypto.jpg");
+    /* Usiamo il colore scuro delle card (42, 42, 42) con il 90% di opacità */
+    background-color: rgba(42, 42, 42, 0.9); 
+    background-position: center top; 
+    background-size: 500px; 
+    
+    /* Nessuna istruzione 'fixed' per evitare il movimento (statico) */
+    
     border-bottom: 1px solid var(--colore-bordo);
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
