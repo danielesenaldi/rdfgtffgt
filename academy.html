@@ -118,20 +118,21 @@
         </div>
     </footer>
 
-    <script>
+<script>
         window.addEventListener('scroll', function() {
-            const particlesWrapper = document.querySelector('.academy-particles-wrapper');
+            // Selezioniamo il contenitore usando l'ID
+            const particlesWrapper = document.getElementById('academyParticles');
 
             if (particlesWrapper) {
                 var scrolled = window.pageYOffset;
                 
-                // VELOCITÀ PARALLASSE RIDOTTA per maggiore stabilità e fluidità (20% della velocità di scroll)
+                // Manteniamo la velocità a 0.2 per la stabilità
                 var parallaxSpeed = 0.2; 
 
+                // Applichiamo il movimento
                 particlesWrapper.style.transform = 'translateY(' + scrolled * parallaxSpeed + 'px)'; 
             }
         });
     </script>
-
+    
 </body>
-</html>
