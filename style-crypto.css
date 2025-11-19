@@ -33,7 +33,7 @@ body {
 /* --- Navbar (in style-crypto.css) - FIX texture non visibile --- */
 .navbar {
     /* FORZA L'IMMAGINE SOPRA TUTTO */
-    background-image: url("immagini/texture-nuvole.png") !important; 
+    background-image: url("immagini/texture-crypto.jpg") !important; 
     
     /* Colore di base scuro con opacità garantita */
     background-color: rgba(42, 42, 42, 0.9) !important; 
