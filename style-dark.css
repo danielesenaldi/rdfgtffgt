@@ -207,32 +207,16 @@ body {
     }
 }
 
-/* --- EFFETTO PARTICELLE ACADEMY (Velocità Massima) --- */
 
-/* 3. Definizione dell'Animazione */
-@keyframes floatUp {
-    0% {
-        transform: translateY(0);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-100vh);
-        /* Velocità ora molto più alta, max 6s */
-    }
+/* --- Sostituisci la regola .academy-particle in style-dark.css --- */
+.academy-particle {
+    position: absolute;
+    /* Colore Rosso-Bianco */
+    background-color: rgba(255, 100, 100, 0.5); 
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 100, 100, 0.7); 
+    opacity: 0; /* Lo facciamo apparire con JS */
+    /* Nessuna animazione o posizione iniziale per ora */
 }
-@-webkit-keyframes floatUp {
-    0% {
-        -webkit-transform: translateY(0);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: translateY(-100vh);
-        /* Velocità ora molto più alta, max 6s */
-    }
-}
+
+/* La regola .academy-particles-wrapper rimane invariata, con position: fixed */
