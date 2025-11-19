@@ -30,17 +30,19 @@ body {
     padding: 0 20px;
 }
 
-/* --- Navbar (in style-crypto.css) --- */
+/* --- Navbar (in style-crypto.css) - FIX texture non visibile --- */
 .navbar {
-    /* Base scura con la texture nuvola sopra */
-    background-image: url("immagini/texture-crypto.jpg");
-    /* Usiamo il colore scuro delle card (42, 42, 42) con il 90% di opacità */
-    background-color: rgba(42, 42, 42, 0.9); 
+    /* FORZA L'IMMAGINE SOPRA TUTTO */
+    background-image: url("immagini/texture-nuvole.png") !important; 
+    
+    /* Colore di base scuro con opacità garantita */
+    background-color: rgba(42, 42, 42, 0.9) !important; 
+    
+    background-repeat: repeat;
     background-position: center top; 
     background-size: 500px; 
     
-    /* Nessuna istruzione 'fixed' per evitare il movimento (statico) */
-    
+    /* Il resto rimane come prima */
     border-bottom: 1px solid var(--colore-bordo);
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
@@ -48,7 +50,6 @@ body {
     top: 0;
     z-index: 100;
 }
-
 .navbar .container {
     display: flex;
     justify-content: space-between;
