@@ -207,7 +207,7 @@ body {
     }
 }
 
-/* --- EFFETTO PARTICELLE ACADEMY (Modifiche alla Velocità di Fluttuazione) --- */
+/* --- EFFETTO PARTICELLE ACADEMY (Velocità Massima) --- */
 
 /* 3. Definizione dell'Animazione */
 @keyframes floatUp {
@@ -220,7 +220,7 @@ body {
     }
     100% {
         transform: translateY(-100vh);
-        /* L'animazione sarà molto più veloce (ad esempio, massimo 10s invece di 30s) */
+        /* Velocità ora molto più alta, max 6s */
     }
 }
 @-webkit-keyframes floatUp {
@@ -233,7 +233,6 @@ body {
     }
     100% {
         -webkit-transform: translateY(-100vh);
-        /* L'animazione sarà molto più veloce */
+        /* Velocità ora molto più alta, max 6s */
     }
 }
-/* Le altre regole CSS restano uguali */
