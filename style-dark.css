@@ -29,7 +29,15 @@ body {
 
 /* --- Navbar --- */
 .navbar {
-    background-color: var(--colore-card);
+    /* La texture si muoverà INSIEME alla barra (effetto statico) */
+    background-image: url("immagini/texture-nuvole.png");
+    /* Sfondo scuro con un po' di trasparenza (0.9) per vedere la texture */
+    background-color: rgba(34, 34, 34, 0.9); 
+    background-position: center top; 
+    background-size: 500px; 
+    
+    /* Nota: nessuna istruzione 'fixed' per evitare il movimento */
+    
     border-bottom: 1px solid var(--colore-bordo);
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
