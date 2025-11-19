@@ -15,25 +15,11 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    
-    /* --- IMPOSTAZIONI SFONDO NUVOLA E PARALLASSE --- */
-    background-color: var(--colore-bg);
-    background-image: url("immagini/texture-teca.jpg"); /* Usa la tua texture */
-    background-repeat: repeat;
-    background-attachment: fixed; /* Ancoraggio per il Parallasse */
-    background-position: center 0;
-    background-size: 500px;
-    /* ----------------------------------------------- */
-    
-    color: var(--colore-testo); /* Colore del testo primario (era scuro) */
+    background-color: var(--colore-bg); /* Torna al colore solido (verde chiaro/bianco) */
+    color: var(--colore-testo); /* Torna al testo scuro */
     line-height: 1.6;
 }
 
-/* Aggiungi questa regola (o modificala) per rendere leggibile il testo sopra lo sfondo scuro */
-.page-content p, .page-content h1 {
-    color: #ffffff; /* Testo chiaro per contrasto */
-    text-shadow: 0 2px 5px rgba(0,0,0,0.8); /* Ombra forte per staccarlo dalle nuvole */
-}
 
 .container {
     max-width: 960px;
