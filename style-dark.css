@@ -29,7 +29,7 @@ body {
 
 /* --- Navbar (in style-dark.css) --- */
 .navbar {
-    background-image: url("immagini/texture-nuvole.png");
+    background-image: url("immagini/texture-academy.jpg");
     background-color: rgba(34, 34, 34, 0.9); 
     background-position: center top; 
     background-size: 500px; 
