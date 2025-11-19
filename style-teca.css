@@ -18,7 +18,7 @@ body {
     
     /* --- IMPOSTAZIONI SFONDO NUVOLA E PARALLASSE --- */
     background-color: var(--colore-bg);
-    background-image: url("immagini/texture-nuvole.png"); /* Usa la tua texture */
+    background-image: url("immagini/texture-teca.jpg"); /* Usa la tua texture */
     background-repeat: repeat;
     background-attachment: fixed; /* Ancoraggio per il Parallasse */
     background-position: center 0;
