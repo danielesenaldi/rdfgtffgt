@@ -29,7 +29,7 @@ body {
 /* --- Modifica 1: NAVBAR (in style-teca.css) --- */
 .navbar {
     /* La texture si muoverà INSIEME alla barra, quindi sarà statica */
-    background-image: url("immagini/texture-nuvole.jpg");
+    background-image: url("immagini/texture-teca.jpg");
     background-color: rgba(103, 146, 97, 0.9); /* Base Verde Teca 90% opaca */
     background-position: center top; 
     background-size: 500px; 
