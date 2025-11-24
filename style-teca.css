@@ -1,221 +1,224 @@
 /* --- Variabili Globali (Tema TECA - Barra Verde) --- */
 :root {
-    --colore-teca: #679261;
-    --colore-teca-hover: #4e7a46;
-    --colore-testo: #222222;
-    --colore-testo-sec: #555555;
-    --colore-bg: #ffffff;
-    --colore-card: #ffffff;
-    --colore-bordo: #eeeeee;
-    --ombra-card: 0 5px 15px rgba(0,0,0,0.1);
+    --colore-teca: #679261;
+    --colore-teca-hover: #4e7a46;
+    --colore-testo: #222222;
+    --colore-testo-sec: #555555;
+    --colore-bg: #ffffff;
+    --colore-card: #ffffff;
+    --colore-bordo: #eeeeee;
+    --ombra-card: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* --- Reset e Stili Generali in style-teca.css --- */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--colore-bg); /* Torna al colore solido (verde chiaro/bianco) */
-    color: var(--colore-testo); /* Torna al testo scuro */
-    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--colore-bg); /* Torna al colore solido (verde chiaro/bianco) */
+    color: var(--colore-testo); /* Torna al testo scuro */
+    line-height: 1.6;
 }
 
 
 .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* --- Modifica 1: NAVBAR (in style-teca.css) --- */
 .navbar {
-    /* La texture si muoverà INSIEME alla barra, quindi sarà statica */
-    background-image: url("immagini/texture-teca.jpg");
-    background-color: rgba(103, 146, 97, 0.9); /* Base Verde Teca 90% opaca */
-    background-position: center top; 
-    background-size: 500px; 
-    
-    /* Nota: ho rimosso 'background-attachment: fixed;' */
-    
-    border-bottom: 1px solid var(--colore-teca-hover);
-    padding: 1rem 0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    /* La texture si muoverà INSIEME alla barra, quindi sarà statica */
+    background-image: url("immagini/texture-teca.jpg");
+    background-color: rgba(103, 146, 97, 0.9); /* Base Verde Teca 90% opaca */
+    background-position: center top; 
+    background-size: 500px; 
+    
+    /* Nota: ho rimosso 'background-attachment: fixed;' */
+    
+    border-bottom: 1px solid var(--colore-teca-hover);
+    padding: 1rem 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar .logo, .navbar .logo:visited {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
 }
 
-.nav-menu a, .nav-menu a:visited {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 500;
-    margin-left: 20px;
-    transition: color 0.3s ease;
-    opacity: 0.8;
+/* MODIFICA EFFETTUATA QUI: Il selettore è stato reso più generico per includere tutti i nuovi link */
+.nav-menu a, .nav-menu a:visited { 
+    text-decoration: none;
+    color: #ffffff; /* GARANTISCE CHE ANCHE IL NUOVO LINK SIA BIANCO */
+    font-weight: 500;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+    opacity: 0.8;
 }
+
 .nav-menu a:hover {
-    color: #ffffff;
-    opacity: 1;
+    color: #ffffff;
+    opacity: 1;
 }
+
 .nav-menu a.active, .nav-menu a.active:visited {
-    color: #ffffff;
-    font-weight: bold;
-    opacity: 1;
+    color: #ffffff;
+    font-weight: bold;
+    opacity: 1;
 }
 
 /* --- Contenuto Pagina --- */
 .page-content {
-    padding: 2rem 0;
-    min-height: 60vh; 
+    padding: 2rem 0;
+    min-height: 60vh; 
 }
 
 /* 1. ANIMAZIONE INGRESSO (sul contenitore) */
 .page-logo-wrapper {
-    animation: fadeInUp 1.2s ease-out forwards;
-    animation-delay: 0.3s;
+    animation: fadeInUp 1.2s ease-out forwards;
+    animation-delay: 0.3s;
 }
 
 /* Logo Teca sulla pagina (dentro il wrapper) */
 .page-logo {
-    display: block;
-    margin: 0 auto 2rem auto;
-    max-width: 300px;
-    height: auto;
-    transition: transform 0.3s ease-out; /* Prepara per l'hover */
+    display: block;
+    margin: 0 auto 2rem auto;
+    max-width: 300px;
+    height: auto;
+    transition: transform 0.3s ease-out; /* Prepara per l'hover */
 }
 
 /* 2. EFFETTO MOUSE (sul logo) */
 .page-logo:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-5px); 
 }
 
 /* --- Card (Stile Teca) --- */
 .card {
-    background-color: var(--colore-card);
-    border-radius: 8px;
-    box-shadow: var(--ombra-card);
-    padding: 0; 
-    margin-bottom: 1.5rem;
-    border: 1px solid var(--colore-bordo);
-    transition: all 0.3s ease-out; 
-    overflow: hidden; 
-    position: relative; 
+    background-color: var(--colore-card);
+    border-radius: 8px;
+    box-shadow: var(--ombra-card);
+    padding: 0; 
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--colore-bordo);
+    transition: all 0.3s ease-out; 
+    overflow: hidden; 
+    position: relative; 
 }
 
 .card:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
 /* --- IMMAGINE DEL LIBRO (Layout "quadratino") --- */
 .project-img {
-    width: 100%;
-    height: 250px;
-    object-fit: contain; 
-    display: block;
-    background-color: #f9f9f9;
-    box-sizing: border-box;
-    padding: 10px;
+    width: 100%;
+    height: 250px;
+    object-fit: contain; 
+    display: block;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 .card-content {
-    padding: 1.5rem;
-    padding-top: 0.5rem;
+    padding: 1.5rem;
+    padding-top: 0.5rem;
 }
 
 .card-content h3 {
-    font-weight: bold;
-    color: var(--colore-testo);
-    margin-top: 0;
+    font-weight: bold;
+    color: var(--colore-testo);
+    margin-top: 0;
 }
 
 .book-price {
-    display: block;
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: var(--colore-teca); 
-    margin-top: 1rem;
-    text-align: right;
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--colore-teca); 
+    margin-top: 1rem;
+    text-align: right;
 }
 
 /* --- Griglia Progetti (Marketplace) --- */
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
 }
 
 /* --- Footer --- */
 .footer {
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 2rem;
-    background-color: #f8f9fa;
-    border-top: 1px solid var(--colore-bordo);
-    color: var(--colore-testo-sec);
-    font-size: 0.9rem;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid var(--colore-bordo);
+    color: var(--colore-testo-sec);
+    font-size: 0.9rem;
 }
 
 /* --- Definizione Animazione (per il wrapper del logo) --- */
 @keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* --- Media Query per Cellulari --- */
 @media (max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-    }
-    .nav-menu {
-        margin-top: 1rem;
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-    }
-    .nav-menu a {
-        margin-left: 0;
-    }
+    .navbar .container {
+        flex-direction: column;
+    }
+    .nav-menu {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .nav-menu a {
+        margin-left: 0;
+    }
 
-    /* --- Modifica per griglia Teca su mobile --- */
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 1rem; 
-    }
-    .project-img {
-        height: 180px; 
-    }
-    .card-content {
-        padding: 1rem; 
-    }
-    .card-content h3 {
-        font-size: 1rem; 
-    }
-    .card-content p {
-        font-size: 0.85rem; 
-        line-height: 1.4;
-    }
-    .book-price {
-        font-size: 1rem; 
-        margin-top: 0.5rem;
-    }
+    /* --- Modifica per griglia Teca su mobile --- */
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 1rem; 
+    }
+    .project-img {
+        height: 180px; 
+    }
+    .card-content {
+        padding: 1rem; 
+    }
+    .card-content h3 {
+        font-size: 1rem; 
+    }
+    .card-content p {
+        font-size: 0.85rem; 
+        line-height: 1.4;
+    }
+    .book-price {
+        font-size: 1rem; 
+        margin-top: 0.5rem;
+    }
 }
