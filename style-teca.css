@@ -26,12 +26,19 @@ body {
     padding: 0 20px;
 }
 
-/* --- Navbar (Stile Teca - SFONDO VERDE) --- */
+/* --- Modifica 1: NAVBAR (in style-teca.css) --- */
 .navbar {
-    background-color: var(--colore-teca);
+    /* La texture si muoverà INSIEME alla barra, quindi sarà statica */
+    background-image: url("immagini/texture-nuvole.png");
+    background-color: rgba(103, 146, 97, 0.9); /* Base Verde Teca 90% opaca */
+    background-position: center top; 
+    background-size: 500px; 
+    
+    /* Nota: ho rimosso 'background-attachment: fixed;' */
+    
     border-bottom: 1px solid var(--colore-teca-hover);
     padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
     position: sticky;
     top: 0;
     z-index: 100;
