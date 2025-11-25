@@ -61,6 +61,16 @@
             // Sposta lo sfondo più lentamente del resto
             document.body.style.backgroundPosition = 'center ' + -(scrolled * speed) + 'px';
         });
-    </script>
+   <script>
+    // Seleziona il pulsante hamburger e il menu
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    // Aggiungi un ascoltatore di eventi al pulsante
+    menuToggle.addEventListener('click', function() {
+        // Alterna la classe 'active' sul menu di navigazione
+        navMenu.classList.toggle('active');
+    });
+</script>
 </body>
 </html>
