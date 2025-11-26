@@ -263,3 +263,51 @@ body {
         margin-left: 0;
     }
 }
+/* --- Definizione dell'Animazione di Battito (Pulse) --- */
+@keyframes ctaPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+    5% {
+        transform: scale(1.1); /* Leggero ingrandimento */
+        box-shadow: 0 0 15px rgba(224, 172, 93, 0.9); /* Ombra luminosa */
+    }
+    10% {
+        transform: scale(1); /* Torna alla dimensione normale */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* --- Stili per il Pulsante Floating Fisso AGGIORNATI --- */
+
+.floating-cta-button {
+    /* 1. Posizionamento e Fissaggio (invariati) */
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 2000; 
+
+    /* 2. Stile e Aspetto (invariati) */
+    background-color: #e0ac5d; 
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 12px 20px;
+    border-radius: 30px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s, transform 0.1s;
+    
+    /* 3. Animazione di Attenzione (NUOVO) */
+    animation: ctaPulse 4s infinite; /* Nome Animazione | Durata | Ripetizione Infinita */
+}
+
+/* Mantieni lo stile hover per l'interazione diretta */
+.floating-cta-button:hover {
+    background-color: #f0c37d; 
+    transform: scale(1.05);
+    animation: none; /* Disattiva l'animazione al passaggio del mouse per evitare conflitti */
+}
