@@ -305,3 +305,41 @@ body {
         font-size: 1.1rem;
     }
 }
+/* --- Stili per il Pulsante Floating Fisso --- */
+
+.floating-cta-button {
+    /* 1. Posizionamento e Fissaggio */
+    position: fixed; /* Mantiene il pulsante fisso sullo schermo */
+    bottom: 20px; /* Distanza dal fondo */
+    right: 20px; /* Distanza dal lato destro */
+    z-index: 2000; /* Assicura che sia sopra ogni altro elemento */
+
+    /* 2. Stile e Aspetto (simulando un pulsante CTA) */
+    background-color: #e0ac5d; /* Un colore che spicca (usa il colore del tuo tema) */
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 12px 20px;
+    border-radius: 30px; /* Pulsante rotondeggiante */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.floating-cta-button:hover {
+    background-color: #f0c37d; /* Effetto al passaggio del mouse */
+    transform: scale(1.05);
+}
+
+
+/* --- Ottimizzazione per Cellulare (dentro @media (max-width: 768px)) --- */
+
+@media (max-width: 768px) {
+    /* Rimpicciolisci il pulsante sul mobile per non ingombrare troppo */
+    .floating-cta-button {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 18px;
+        font-size: 0.9em;
+    }
+}
