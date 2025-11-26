@@ -343,3 +343,22 @@ body {
         font-size: 0.9em;
     }
 }
+
+/* --- Definizione dell'Animazione di Battito (Pulse) --- */
+@keyframes ctaPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+    5% {
+        transform: scale(1.1); /* Leggero ingrandimento */
+        box-shadow: 0 0 15px rgba(224, 172, 93, 0.9); /* Ombra luminosa */
+    }
+    10% {
+        transform: scale(1); /* Torna alla dimensione normale */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
