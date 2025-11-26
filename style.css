@@ -305,32 +305,35 @@ body {
         font-size: 1.1rem;
     }
 }
-/* --- Stili per il Pulsante Floating Fisso --- */
+/* --- Stili per il Pulsante Floating Fisso AGGIORNATI --- */
 
 .floating-cta-button {
-    /* 1. Posizionamento e Fissaggio */
-    position: fixed; /* Mantiene il pulsante fisso sullo schermo */
-    bottom: 20px; /* Distanza dal fondo */
-    right: 20px; /* Distanza dal lato destro */
-    z-index: 2000; /* Assicura che sia sopra ogni altro elemento */
+    /* 1. Posizionamento e Fissaggio (invariati) */
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 2000; 
 
-    /* 2. Stile e Aspetto (simulando un pulsante CTA) */
-    background-color: #e0ac5d; /* Un colore che spicca (usa il colore del tuo tema) */
+    /* 2. Stile e Aspetto (invariati) */
+    background-color: #e0ac5d; 
     color: #000;
     text-decoration: none;
     font-weight: bold;
     font-size: 1em;
     padding: 12px 20px;
-    border-radius: 30px; /* Pulsante rotondeggiante */
+    border-radius: 30px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     transition: background-color 0.3s, transform 0.1s;
+    
+    /* 3. Animazione di Attenzione (NUOVO) */
+    animation: ctaPulse 4s infinite; /* Nome Animazione | Durata | Ripetizione Infinita */
 }
 
+/* Mantieni lo stile hover per l'interazione diretta */
 .floating-cta-button:hover {
-    background-color: #f0c37d; /* Effetto al passaggio del mouse */
+    background-color: #f0c37d; 
     transform: scale(1.05);
 }
-
 
 /* --- Ottimizzazione per Cellulare (dentro @media (max-width: 768px)) --- */
 
